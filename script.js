@@ -270,14 +270,12 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 // ================================
-// Certificates CRUD + Modals (client-side, password-protected)
+// Certificates Viewer (read-only)
 // ================================
-const CERT_PASSWORD = 'RILWANKHAN@200507';
 const certsKey = 'certificatesData_v1';
 const certGrid = document.getElementById('certificatesGrid');
-const manageBtn = document.getElementById('manageCertsBtn');
 
-// Modal elements
+// Modal elements (viewer only)
 const certModal = document.getElementById('certModal');
 const certModalImage = document.getElementById('certModalImage');
 const certModalTitle = document.getElementById('certModalTitle');
@@ -285,22 +283,10 @@ const certModalIssuer = document.getElementById('certModalIssuer');
 const certModalDate = document.getElementById('certModalDate');
 const certModalClose = document.getElementById('certModalClose');
 
-const certAdminModal = document.getElementById('certAdminModal');
-const certAdminClose = document.getElementById('certAdminClose');
-const certAdminUnlock = document.getElementById('certAdminUnlock');
-const certAdminPassword = document.getElementById('certAdminPassword');
-const certAdminAuth = document.getElementById('certAdminAuth');
-const certAdminPanel = document.getElementById('certAdminPanel');
-const certForm = document.getElementById('certForm');
-const certAdminList = document.getElementById('certAdminList');
-const certFormCancel = document.getElementById('certFormCancel');
-
 let certificates = [];
-let adminUnlocked = false;
-let editIndex = -1;
 
-function openModal(modal) { modal.setAttribute('aria-hidden', 'false'); }
-function closeModal(modal) { modal.setAttribute('aria-hidden', 'true'); }
+function openModal(modal) { if (modal) modal.setAttribute('aria-hidden', 'false'); }
+function closeModal(modal) { if (modal) modal.setAttribute('aria-hidden', 'true'); }
 
 // Seed certificates from DOM if localStorage empty
 function seedCertificatesFromDOM() {
@@ -330,6 +316,7 @@ function saveCertificates() {
 }
 
 function renderCertificates() {
+    if (!certGrid) return;
     certGrid.innerHTML = '';
     certificates.forEach((c, idx) => {
         const card = document.createElement('div');
@@ -350,13 +337,7 @@ function renderCertificates() {
             </div>
         `;
 
-        // click to open viewer
-        card.addEventListener('click', (e) => {
-            // if clicked on admin controls, ignore
-            if (e.target.closest('.admin-actions')) return;
-            openCertViewer(idx);
-        });
-
+        card.addEventListener('click', () => openCertViewer(idx));
         certGrid.appendChild(card);
     });
 
@@ -368,141 +349,16 @@ function renderCertificates() {
 
 function openCertViewer(index) {
     const c = certificates[index];
-    certModalImage.innerHTML = c.image ? `<img src="${escapeHtml(c.image)}" alt="${escapeHtml(c.title)}" onerror="this.parentElement.innerHTML='<p>Add image: ${escapeHtml(c.image)}</p>'">` : '<div style="padding:1rem;color:var(--muted-foreground)">No image provided</div>';
-    certModalTitle.textContent = c.title || 'Certificate';
-    certModalIssuer.textContent = c.issuer || '';
-    certModalDate.textContent = c.date || '';
+    certModalImage.innerHTML = c && c.image ? `<img src="${escapeHtml(c.image)}" alt="${escapeHtml(c.title)}" onerror="this.parentElement.innerHTML='<p>Add image: ${escapeHtml(c.image)}</p>'">` : '<div style="padding:1rem;color:var(--muted-foreground)">No image provided</div>';
+    certModalTitle.textContent = (c && c.title) ? c.title : 'Certificate';
+    certModalIssuer.textContent = (c && c.issuer) ? c.issuer : '';
+    certModalDate.textContent = (c && c.date) ? c.date : '';
     openModal(certModal);
 }
 
-certModalClose.addEventListener('click', () => closeModal(certModal));
-document.getElementById('certModalOverlay').addEventListener('click', () => closeModal(certModal));
-
-// Admin panel
-manageBtn.addEventListener('click', () => { openModal(certAdminModal); });
-certAdminClose.addEventListener('click', () => { closeAdmin(); });
-document.getElementById('certAdminOverlay').addEventListener('click', () => { closeAdmin(); });
-
-function closeAdmin() {
-    closeModal(certAdminModal);
-    adminUnlocked = false;
-    certAdminAuth.style.display = 'flex';
-    certAdminPanel.style.display = 'none';
-    certAdminPassword.value = '';
-}
-
-certAdminUnlock.addEventListener('click', () => {
-    const val = certAdminPassword.value || '';
-    if (val === CERT_PASSWORD) {
-        adminUnlocked = true;
-        certAdminAuth.style.display = 'none';
-        certAdminPanel.style.display = 'block';
-        refreshAdminList();
-    } else {
-        showToast('Incorrect password', 'error');
-    }
-});
-
-// Password visibility toggle and cancel
-const certPasswordToggle = document.getElementById('certPasswordToggle');
-const certAdminCancel = document.getElementById('certAdminCancel');
-if (certPasswordToggle) {
-    certPasswordToggle.addEventListener('click', (e) => {
-        e.preventDefault();
-        if (certAdminPassword.type === 'password') {
-            certAdminPassword.type = 'text';
-            certPasswordToggle.textContent = 'Hide';
-        } else {
-            certAdminPassword.type = 'password';
-            certPasswordToggle.textContent = 'Show';
-        }
-    });
-}
-if (certAdminCancel) {
-    certAdminCancel.addEventListener('click', () => closeAdmin());
-}
-
-function refreshAdminList() {
-    certAdminList.innerHTML = '';
-    certificates.forEach((c, idx) => {
-        const item = document.createElement('div');
-        item.className = 'admin-item';
-        item.innerHTML = `
-            <div class="meta">
-                <strong>${escapeHtml(c.title)}</strong>
-                <div style="font-size:0.85rem;color:var(--muted-foreground);">${escapeHtml(c.issuer)} • ${escapeHtml(c.date)}</div>
-            </div>
-            <div class="admin-actions">
-                <button class="btn btn-outline" data-edit="${idx}">Edit</button>
-                <button class="btn btn-outline" data-delete="${idx}">Delete</button>
-            </div>
-        `;
-
-        item.querySelector('[data-edit]') .addEventListener('click', (e) => {
-            e.stopPropagation();
-            openEditForm(parseInt(e.target.dataset.edit, 10));
-        });
-        item.querySelector('[data-delete]').addEventListener('click', (e) => {
-            e.stopPropagation();
-            attemptDelete(parseInt(e.target.dataset.delete, 10));
-        });
-
-        certAdminList.appendChild(item);
-    });
-}
-
-function openEditForm(index) {
-    editIndex = index;
-    const c = certificates[index];
-    document.getElementById('certTitle').value = c.title || '';
-    document.getElementById('certIssuer').value = c.issuer || '';
-    document.getElementById('certDate').value = c.date || '';
-    document.getElementById('certImageUrl').value = c.image || '';
-    document.getElementById('certFeatured').checked = !!c.featured;
-}
-
-function attemptDelete(index) {
-    const pw = prompt('Enter password to delete certificate:');
-    if (pw === CERT_PASSWORD) {
-        certificates.splice(index, 1);
-        saveCertificates();
-        renderCertificates();
-        refreshAdminList();
-        showToast('Certificate deleted', 'success');
-    } else {
-        showToast('Incorrect password', 'error');
-    }
-}
-
-certFormCancel.addEventListener('click', (e) => {
-    e.preventDefault();
-    certForm.reset();
-    editIndex = -1;
-});
-
-certForm.addEventListener('submit', (e) => {
-    e.preventDefault();
-    if (!adminUnlocked) { showToast('Unlock admin first', 'error'); return; }
-    const title = document.getElementById('certTitle').value.trim();
-    const issuer = document.getElementById('certIssuer').value.trim();
-    const date = document.getElementById('certDate').value.trim();
-    const image = document.getElementById('certImageUrl').value.trim();
-    const featured = document.getElementById('certFeatured').checked;
-
-    const payload = { title, issuer, date, image, featured };
-    if (editIndex >= 0) {
-        certificates[editIndex] = payload;
-        showToast('Certificate updated', 'success');
-    } else {
-        certificates.unshift(payload); // newest first
-        showToast('Certificate added', 'success');
-    }
-    saveCertificates();
-    renderCertificates();
-    refreshAdminList();
-    certForm.reset();
-    editIndex = -1;
-});
+if (certModalClose) certModalClose.addEventListener('click', () => closeModal(certModal));
+const certModalOverlay = document.getElementById('certModalOverlay');
+if (certModalOverlay) certModalOverlay.addEventListener('click', () => closeModal(certModal));
 
 // Escape helper to avoid inserting raw HTML
 function escapeHtml(str) {
@@ -594,3 +450,63 @@ const enhancedObserver = new IntersectionObserver((entries) => {
 // observe stagger parents and certificates grid
 document.querySelectorAll('.stagger-in, #certificatesGrid').forEach(el => enhancedObserver.observe(el));
 
+// ================================
+// Certificate Modal Functionality
+// ================================
+function openCertificate(certType) {
+    const modal = document.getElementById('certificateModal');
+    const img = document.getElementById('certificateImage');
+    const title = document.getElementById('certificateTitle');
+    
+    const certificates = {
+        'web-dev': {
+            image: 'full.jpg',
+            title: 'Web Development Certification'
+        },
+        'ui-ux': {
+            image: 'ui.jpg',
+            title: 'UI/UX Design Certificate'
+        },
+        'python': {
+            image: 'fullai.jpg',
+            title: 'Python Programming Certificate'
+        },
+        'java': {
+            image: 'fullai.jpg',
+            title: 'Java Programming Certificate'
+        },
+        'hackathon': {
+            image: 'jet.jpg',
+            title: 'Jet Hackathon Runner Up'
+        }
+    };
+    
+    if (certificates[certType]) {
+        img.src = certificates[certType].image;
+        img.alt = certificates[certType].title;
+        title.textContent = certificates[certType].title;
+        modal.classList.add('active');
+    }
+}
+
+// Close certificate modal
+function closeCertificate() {
+    const modal = document.getElementById('certificateModal');
+    modal.classList.remove('active');
+}
+
+// Close modal functionality
+const certificateModal = document.getElementById('certificateModal');
+const closeBtn = document.querySelector('.close');
+
+if (closeBtn) {
+    closeBtn.addEventListener('click', closeCertificate);
+}
+
+if (certificateModal) {
+    window.addEventListener('click', (e) => {
+        if (e.target === certificateModal) {
+            closeCertificate();
+        }
+    });
+}
