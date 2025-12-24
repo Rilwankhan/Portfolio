@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Rilwan Khan">
+    <title>Rilwan Khan</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body class="dark">
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="#hero" class="logo">
+                <span class="gradient-text">Portfolio</span>
+            </a>
+            <div class="nav-links" id="navLinks">
+                <a href="#hero" class="nav-link active">Home</a>
+                <a href="#about-preview" class="nav-link">About</a>
+                <a href="#certificates" class="nav-link">Certificates</a>
+                <a href="#contact" class="nav-link">Contact</a>
+                <a href="about.html" class="nav-link">Full Profile</a>
+            </div>
+            <div class="nav-actions">
+                <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+                    <i class="fas fa-sun" id="sunIcon"></i>
+                    <i class="fas fa-moon" id="moonIcon" style="display: none;"></i>
+                </button>
+                <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero">
+        <div class="hero-bg-effects">
+            <div class="hero-glow hero-glow-1"></div>
+            <div class="hero-glow hero-glow-2"></div>
+        </div>
+        <div class="container hero-container">
+            <div class="hero-content animate-on-scroll">
+                <p class="hero-greeting">Hello, I'm</p>
+                <h1 class="hero-title">
+                    <span class="gradient-text">Creative</span><br>Developer
+                </h1>
+                <p class="hero-description">
+                    Crafting beautiful digital experiences through code and design. 
+                    Passionate about creating responsive, user-friendly web applications.
+                </p>
+                <div class="hero-tags">
+                    <span class="hero-tag">
+                        <i class="fas fa-code"></i>
+                        Web Developer
+                    </span>
+                    <span class="hero-tag">
+                        <i class="fas fa-palette"></i>
+                        UI/UX Designer
+                    </span>
+                    <span class="hero-tag">
+                        <i class="fas fa-briefcase"></i>
+                        Professional Freelancer
+                    </span>
+                </div>
+                <div class="hero-cta">
+                    <a href="#contact" class="btn btn-primary">Get In Touch</a>
+                    <a href="about.html" class="btn btn-outline">Learn More</a>
+                </div>
+            </div>
+            <div class="hero-image animate-on-scroll">
+                <div class="profile-wrapper">
+                    <div class="profile-circle">
+                        <!-- Replace src with your profile photo path -->
+                        <img src="Rilwankhan .png" alt="Rilwan Khan" class="profile-img profile-img-main" onerror="this.style.display='none'; this.parentElement.querySelector('.profile-fallback').style.display='flex';">
+                        <div class="profile-fallback" style="display: none;">
+                            <span>👨‍💻</span>
+                        </div>
+                    </div>
+                    <div class="profile-glow"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Preview Section -->
+    <section id="about-preview" class="about-preview">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <h2 class="section-title">What I <span class="gradient-text">Bring</span></h2>
+                <p class="section-description">
+                    With expertise in modern web technologies, I create digital solutions 
+                    that combine aesthetics with functionality.
+                </p>
+            </div>
+            <div class="highlights-grid">
+                <div class="highlight-card animate-on-scroll">
+                    <div class="highlight-icon"><i class="fas fa-code"></i></div>
+                    <h3>Clean Code</h3>
+                    <p>Writing maintainable and scalable code</p>
+                </div>
+                <div class="highlight-card animate-on-scroll" style="animation-delay: 0.1s;">
+                    <div class="highlight-icon"><i class="fas fa-palette"></i></div>
+                    <h3>UI/UX Design</h3>
+                    <p>Creating intuitive user experiences</p>
+                </div>
+                <div class="highlight-card animate-on-scroll" style="animation-delay: 0.2s;">
+                    <div class="highlight-icon"><i class="fas fa-globe"></i></div>
+                    <h3>Responsive</h3>
+                    <p>Mobile-first development approach</p>
+                </div>
+                <div class="highlight-card animate-on-scroll" style="animation-delay: 0.3s;">
+                    <div class="highlight-icon"><i class="fas fa-bolt"></i></div>
+                    <h3>Performance</h3>
+                    <p>Optimized for speed and efficiency</p>
+                </div>
+            </div>
+            <div class="text-center animate-on-scroll">
+                <a href="about.html" class="btn btn-outline-primary">View Full Profile</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certificates Section -->
+    <section id="certificates" class="certificates">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <h2 class="section-title">My <span class="gradient-text">Certificates</span></h2>
+                <p class="section-description">
+                    Achievements and certifications that showcase my continuous learning journey 
+                    and professional development.
+                </p>
+                <div class="cert-admin-actions">
+                    <button id="manageCertsBtn" class="btn btn-outline-primary">Manage Certificates</button>
+                </div>
+            </div>
+
+            <div class="certificates-grid" id="certificatesGrid">
+                <!-- Certificate 1 - Featured -->
+                <div class="certificate-card featured animate-on-scroll">
+                    <div class="cert-icon trophy">
+                        <i class="fas fa-trophy"></i>
+                    </div>
+                    <div class="cert-content">
+                        <h3>Hackathon Runner Up</h3>
+                        <p class="cert-issuer">Tech Innovation Hub</p>
+                        <p class="cert-date">2025</p>
+                    </div>
+                    <span class="cert-badge">🏆 Featured Achievement</span>
+                    <!-- Add your certificate image here -->
+                    <div class="cert-image-placeholder">
+                        <img src="jet.jpg" alt="Hackathon Certificate" onerror="this.parentElement.innerHTML='<p>Add image: certificates/hackathon.jpg</p>'">
+                    </div>
+                </div>
+
+                <!-- Certificate 2 -->
+                <div class="certificate-card animate-on-scroll" style="animation-delay: 0.1s;">
+                    <div class="cert-icon award">
+                        <i class="fas fa-award"></i>
+                    </div>
+                    <div class="cert-content">
+                        <h3>Web Development Certificate</h3>
+                        <p class="cert-issuer">Professional Training Institute</p>
+                        <p class="cert-date">2025</p>
+                    </div>
+                    <div class="cert-image-placeholder">
+                        <img src="certificates/webdev.jpg" alt="Web Development Certificate" onerror="this.parentElement.innerHTML='<p>Add image: certificates/webdev.jpg</p>'">
+                    </div>
+                </div>
+
+                <!-- Certificate 3 -->
+                <div class="certificate-card animate-on-scroll" style="animation-delay: 0.2s;">
+                    <div class="cert-icon award">
+                        <i class="fas fa-award"></i>
+                    </div>
+                    <div class="cert-content">
+                        <h3>UI/UX Design Fundamentals</h3>
+                        <p class="cert-issuer">Design Academy</p>
+                        <p class="cert-date">2025</p>
+                    </div>
+                    <div class="cert-image-placeholder">
+                        <img src="certificates/uiux.jpg" alt="UI/UX Certificate" onerror="this.parentElement.innerHTML='<p>Add image: certificates/uiux.jpg</p>'">
+                    </div>
+                </div>
+
+                <!-- Certificate 4 -->
+                <div class="certificate-card animate-on-scroll" style="animation-delay: 0.3s;">
+                    <div class="cert-icon award">
+                        <i class="fas fa-award"></i>
+                    </div>
+                    <div class="cert-content">
+                        <h3>Responsive Web Design</h3>
+                        <p class="cert-issuer">freeCodeCamp</p>
+                        <p class="cert-date">2025</p>
+                    </div>
+                    <div class="cert-image-placeholder">
+                        <img src="certificates/responsive.jpg" alt="Responsive Design Certificate" onerror="this.parentElement.innerHTML='<p>Add image: certificates/responsive.jpg</p>'">
+                    </div>
+                </div>
+
+                <!-- Certificate 5 -->
+                <div class="certificate-card animate-on-scroll" style="animation-delay: 0.4s;">
+                    <div class="cert-icon award">
+                        <i class="fas fa-award"></i>
+                    </div>
+                    <div class="cert-content">
+                        <h3>JavaScript Algorithms</h3>
+                        <p class="cert-issuer">Coding Bootcamp</p>
+                        <p class="cert-date">2025</p>
+                    </div>
+                    <div class="cert-image-placeholder">
+                        <img src="certificates/javascript.jpg" alt="JavaScript Certificate" onerror="this.parentElement.innerHTML='<p>Add image: certificates/javascript.jpg</p>'">
+                    </div>
+                </div>
+
+                <!-- Add more certificates by copying the structure above -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <h2 class="section-title">Get In <span class="gradient-text">Touch</span></h2>
+                <p class="section-description">
+                    Have a project in mind or want to collaborate? I'd love to hear from you. 
+                    Let's create something amazing together.
+                </p>
+            </div>
+
+            <div class="contact-grid">
+                <!-- Contact Form -->
+                <div class="contact-form-wrapper animate-on-scroll">
+                    <div class="glass-card">
+                        <h3>Send a Message</h3>
+                        <form id="contactForm" action="https://formspree.io/f/myzraeew" method="POST">
+                            <div class="form-group">
+                                <label for="name">Name</label>
+                                <input type="text" id="name" name="name" required placeholder="Your name">
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" name="email" required placeholder="your@email.com">
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Message</label>
+                                <textarea id="message" name="message" required rows="5" placeholder="Tell me about your project..."></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-full">
+                                <i class="fas fa-paper-plane"></i>
+                                Send Message
+                            </button>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- Contact Info & Social -->
+                <div class="contact-info-wrapper">
+                    <!-- Contact Info -->
+                    <div class="glass-card animate-on-scroll" style="animation-delay: 0.1s;">
+                        <h3>Contact Info</h3>
+                        <div class="contact-info-list">
+                            <div class="contact-info-item">
+                                <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+                                <div>
+                                    <p class="contact-label">Email</p>
+                                    <p class="contact-value">rilwankhan2005@gmail.com</p>
+                                </div>
+                            </div>
+                            <div class="contact-info-item">
+                                <div class="contact-icon"><i class="fas fa-phone"></i></div>
+                                <div>
+                                    <p class="contact-label">Phone</p>
+                                    <p class="contact-value">+91 8608865811</p>
+                                </div>
+                            </div>
+                            <div class="contact-info-item">
+                                <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
+                                <div>
+                                    <p class="contact-label">Location</p>
+                                    <p class="contact-value">Trichy, India</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Social Links -->
+                    <div class="glass-card animate-on-scroll" style="animation-delay: 0.2s;">
+                        <h3>Follow Me</h3>
+                        <div class="social-grid">
+                            <a href="https://github.com/Rilwankhan" target="_blank" rel="noopener noreferrer" class="social-link">
+                                <i class="fab fa-github"></i>
+                                <div class="social-info">
+                                    <span class="social-name">GitHub</span>
+                                    <span class="social-handle">@Rilwankhan</span>
+                                </div>
+                            </a>
+                            <a href="https://www.instagram.com/kd_paiyan_rilwan_07" target="_blank" rel="noopener noreferrer" class="social-link">
+                                <i class="fab fa-instagram"></i>
+                                <div class="social-info">
+                                    <span class="social-name">Instagram</span>
+                                    <span class="social-handle">@kd_paiyan_rilwan_07</span>
+                                </div>
+                            </a>
+                            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="social-link">
+                                <i class="fab fa-linkedin"></i>
+                                <div class="social-info">
+                                    <span class="social-name">LinkedIn</span>
+                                    <span class="social-handle">Rilwan Khan</span>
+                                </div>
+                            </a>
+                            <a href="mailto:rilwankhan2005@gmail.com" class="social-link">
+                                <i class="fas fa-envelope"></i>
+                                <div class="social-info">
+                                    <span class="social-name">Email</span>
+                                    <span class="social-handle">rilwankhan2005@gmail.com</span>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-container">
+            <p>© 2025 Rilwan Khan. Built with passion.</p>
+            <div class="footer-social">
+                <a href="https://github.com/Rilwankhan" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i></a>
+                <a href="https://www.instagram.com/kd_paiyan_rilwan_07" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
+                <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i></a>
+                <a href="mailto:rilwankhan2005@gmail.com"><i class="fas fa-envelope"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Certificate Viewer Modal -->
+    <div id="certModal" class="modal" aria-hidden="true">
+        <div class="modal-overlay" id="certModalOverlay"></div>
+        <div class="modal-content" role="dialog" aria-modal="true" aria-labelledby="certModalTitle">
+            <button class="modal-close" id="certModalClose" aria-label="Close">×</button>
+            <div class="cert-modal-body">
+                <div class="cert-modal-image" id="certModalImage"></div>
+                <div class="cert-modal-info">
+                    <h3 id="certModalTitle">Certificate Title</h3>
+                    <p id="certModalIssuer">Issuer</p>
+                    <p id="certModalDate">Date</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Certificate Admin Modal -->
+    <div id="certAdminModal" class="modal" aria-hidden="true">
+        <div class="modal-overlay" id="certAdminOverlay"></div>
+        <div class="modal-content" role="dialog" aria-modal="true" aria-labelledby="certAdminTitle">
+            <button class="modal-close" id="certAdminClose" aria-label="Close">×</button>
+            <div class="cert-admin-body">
+                <h3 id="certAdminTitle">Manage Certificates</h3>
+                <div id="certAdminAuth" class="cert-admin-auth glass-card" style="padding:1rem; max-width:480px;">
+                    <h4 style="margin:0 0 0.5rem 0;">Administrator</h4>
+                    <p style="margin:0 0 0.75rem 0;color:var(--muted-foreground);">Enter password to manage certificates</p>
+                    <div class="password-field">
+                        <input type="password" id="certAdminPassword" placeholder="Enter password" aria-label="Admin password">
+                        <button id="certPasswordToggle" class="btn btn-outline" aria-label="Toggle password visibility">Show</button>
+                    </div>
+                    <div style="margin-top:0.75rem;display:flex;gap:0.5rem;">
+                        <button id="certAdminUnlock" class="btn btn-primary">Unlock</button>
+                        <button id="certAdminCancel" class="btn btn-outline">Close</button>
+                    </div>
+                    <p class="small muted" style="margin-top:0.5rem;">Password required to add, edit or delete certificates.</p>
+                </div>
+                <div id="certAdminPanel" style="display:none;">
+                    <form id="certForm" class="cert-form">
+                        <div class="form-group">
+                            <label for="certTitle">Title</label>
+                            <input id="certTitle" type="text" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="certIssuer">Issuer</label>
+                            <input id="certIssuer" type="text" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="certDate">Date</label>
+                            <input id="certDate" type="text" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="certImageUrl">Image URL</label>
+                            <input id="certImageUrl" type="text" placeholder="certificates/example.jpg (optional)">
+                        </div>
+                        <div class="form-group">
+                            <label><input id="certFeatured" type="checkbox"> Featured</label>
+                        </div>
+                        <div class="form-actions">
+                            <button type="submit" class="btn btn-primary">Save Certificate</button>
+                            <button type="button" id="certFormCancel" class="btn btn-outline">Cancel</button>
+                        </div>
+                    </form>
+
+                    <h4 style="margin-top:1rem;">Existing Certificates</h4>
+                    <div id="certAdminList" class="cert-admin-list"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
