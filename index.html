@@ -78,7 +78,7 @@
                 <div class="profile-wrapper">
                     <div class="profile-circle">
                         <!-- Replace src with your profile photo path -->
-                        <img src="Rilwankhan .png" alt="Rilwan Khan" class="profile-img profile-img-main" onerror="this.style.display='none'; this.parentElement.querySelector('.profile-fallback').style.display='flex';">
+                        <img src="Rilwankhan.png" alt="Rilwan Khan" class="profile-img profile-img-main" onerror="this.style.display='none'; this.parentElement.querySelector('.profile-fallback').style.display='flex';">
                         <div class="profile-fallback" style="display: none;">
                             <span>👨‍💻</span>
                         </div>
@@ -130,96 +130,54 @@
     <!-- Certificates Section -->
     <section id="certificates" class="certificates">
         <div class="container">
-            <div class="section-header animate-on-scroll">
-                <h2 class="section-title">My <span class="gradient-text">Certificates</span></h2>
-                <p class="section-description">
-                    Achievements and certifications that showcase my continuous learning journey 
-                    and professional development.
-                </p>
-                <div class="cert-admin-actions">
-                    <button id="manageCertsBtn" class="btn btn-outline-primary">Manage Certificates</button>
+            <h2 class="section-title scroll-animate" data-animation="fadeInUp">Certificates & Achievements</h2>
+            <p class="section-subtitle scroll-animate" data-animation="fadeInUp" data-delay="200">Showcasing my continuous learning journey and professional growth</p>
+            <div class="certificates-grid">
+                <div class="certificate-card scroll-animate" data-animation="fadeInUp" data-delay="100" onclick="openCertificate('web-dev')">
+                    <div class="certificate-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h3>Web Development Certification</h3>
+                    <p>Advanced certification in modern web technologies including HTML5, CSS3, JavaScript, and responsive design principles.</p>
+                    <span class="certificate-date">2025</span>
+                    <div class="view-certificate">Click to view certificate</div>
                 </div>
-            </div>
-
-            <div class="certificates-grid" id="certificatesGrid">
-                <!-- Certificate 1 - Featured -->
-                <div class="certificate-card featured animate-on-scroll">
-                    <div class="cert-icon trophy">
+                <div class="certificate-card scroll-animate" data-animation="fadeInUp" data-delay="200" onclick="openCertificate('ui-ux')">
+                    <div class="certificate-icon">
+                        <i class="fas fa-palette"></i>
+                    </div>
+                    <h3>UI/UX Design Certificate</h3>
+                    <p>Professional certification in user interface and user experience design, focusing on creating intuitive and engaging digital experiences.</p>
+                    <span class="certificate-date">2025</span>
+                    <div class="view-certificate">Click to view certificate</div>
+                </div>
+                <div class="certificate-card scroll-animate" data-animation="fadeInUp" data-delay="300" onclick="openCertificate('python')">
+                    <div class="certificate-icon">
+                        <i class="fab fa-python"></i>
+                    </div>
+                    <h3>Python Programming</h3>
+                    <p>Foundation certification in Python programming, covering basic syntax, data structures, and problem-solving techniques.</p>
+                    <span class="certificate-date">2025</span>
+                    <div class="view-certificate">Click to view certificate</div>
+                </div>
+                <div class="certificate-card scroll-animate" data-animation="fadeInUp" data-delay="400" onclick="openCertificate('java')">
+                    <div class="certificate-icon">
+                        <i class="fab fa-java"></i>
+                    </div>
+                    <h3>Java Programming</h3>
+                    <p>Basic certification in Java programming fundamentals, object-oriented programming concepts, and core Java libraries.</p>
+                    <span class="certificate-date">2025</span>
+                    <div class="view-certificate">Click to view certificate</div>
+                </div>
+                <div class="certificate-card scroll-animate" data-animation="fadeInUp" data-delay="500" onclick="openCertificate('hackathon')">
+                    <div class="certificate-icon">
                         <i class="fas fa-trophy"></i>
                     </div>
-                    <div class="cert-content">
-                        <h3>Hackathon Runner Up</h3>
-                        <p class="cert-issuer">Tech Innovation Hub</p>
-                        <p class="cert-date">2025</p>
-                    </div>
-                    <span class="cert-badge">🏆 Featured Achievement</span>
-                    <!-- Add your certificate image here -->
-                    <div class="cert-image-placeholder">
-                        <img src="jet.jpg" alt="Hackathon Certificate">
-                    </div>
+                    <h3>Jet Hackathon Runner Up</h3>
+                    <p>Achieved runner-up position in Jet Hackathon, demonstrating exceptional problem-solving skills and innovative thinking in competitive programming.</p>
+                    <span class="certificate-date">2025</span>
+                    <div class="view-certificate">Click to view certificate</div>
                 </div>
-
-                <!-- Certificate 2 -->
-                <div class="certificate-card animate-on-scroll" style="animation-delay: 0.1s;">
-                    <div class="cert-icon award">
-                        <i class="fas fa-award"></i>
-                    </div>
-                    <div class="cert-content">
-                        <h3>Web Development Certificate</h3>
-                        <p class="cert-issuer">Professional Training Institute</p>
-                        <p class="cert-date">2025</p>
-                    </div>
-                    <div class="cert-image-placeholder">
-                        <img src="full.jpg" alt="Web Development Certificate">
-                    </div>
-                </div>
-
-                <!-- Certificate 3 -->
-                <div class="certificate-card animate-on-scroll" style="animation-delay: 0.2s;">
-                    <div class="cert-icon award">
-                        <i class="fas fa-award"></i>
-                    </div>
-                    <div class="cert-content">
-                        <h3>UI/UX Design Fundamentals</h3>
-                        <p class="cert-issuer">Design Academy</p>
-                        <p class="cert-date">2025</p>
-                    </div>
-                    <div class="cert-image-placeholder">
-                        <img src="ui.jpg" alt="UI/UX Certificate">
-                    </div>
-                </div>
-
-                <!-- Certificate 4 -->
-                <div class="certificate-card animate-on-scroll" style="animation-delay: 0.3s;">
-                    <div class="cert-icon award">
-                        <i class="fas fa-award"></i>
-                    </div>
-                    <div class="cert-content">
-                        <h3>Responsive Web Design</h3>
-                        <p class="cert-issuer">freeCodeCamp</p>
-                        <p class="cert-date">2025</p>
-                    </div>
-                    <div class="cert-image-placeholder">
-                        <img src="FullAI.jpg" alt="Responsive Design Certificate">
-                    </div>
-                </div>
-
-                <!-- Certificate 5 -->
-                <div class="certificate-card animate-on-scroll" style="animation-delay: 0.4s;">
-                    <div class="cert-icon award">
-                        <i class="fas fa-award"></i>
-                    </div>
-                    <div class="cert-content">
-                        <h3>JavaScript Algorithms</h3>
-                        <p class="cert-issuer">Coding Bootcamp</p>
-                        <p class="cert-date">2025</p>
-                    </div>
-                    <div class="cert-image-placeholder">
-                        <img src="jet.jpg" alt="JavaScript Certificate">
-                    </div>
-                </div>
-
-                <!-- Add more certificates by copying the structure above -->
             </div>
         </div>
     </section>
@@ -343,75 +301,17 @@
         </div>
     </footer>
 
-    <!-- Certificate Viewer Modal -->
-    <div id="certModal" class="modal" aria-hidden="true">
-        <div class="modal-overlay" id="certModalOverlay"></div>
-        <div class="modal-content" role="dialog" aria-modal="true" aria-labelledby="certModalTitle">
-            <button class="modal-close" id="certModalClose" aria-label="Close">×</button>
-            <div class="cert-modal-body">
-                <div class="cert-modal-image" id="certModalImage"></div>
-                <div class="cert-modal-info">
-                    <h3 id="certModalTitle">Certificate Title</h3>
-                    <p id="certModalIssuer">Issuer</p>
-                    <p id="certModalDate">Date</p>
-                </div>
-            </div>
+    <!-- Certificate Modal -->
+    <div id="certificateModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <img id="certificateImage" src="" alt="Certificate">
+            <h3 id="certificateTitle"></h3>
         </div>
     </div>
 
-    <!-- Certificate Admin Modal -->
-    <div id="certAdminModal" class="modal" aria-hidden="true">
-        <div class="modal-overlay" id="certAdminOverlay"></div>
-        <div class="modal-content" role="dialog" aria-modal="true" aria-labelledby="certAdminTitle">
-            <button class="modal-close" id="certAdminClose" aria-label="Close">×</button>
-            <div class="cert-admin-body">
-                <h3 id="certAdminTitle">Manage Certificates</h3>
-                <div id="certAdminAuth" class="cert-admin-auth glass-card" style="padding:1rem; max-width:480px;">
-                    <h4 style="margin:0 0 0.5rem 0;">Administrator</h4>
-                    <p style="margin:0 0 0.75rem 0;color:var(--muted-foreground);">Enter password to manage certificates</p>
-                    <div class="password-field">
-                        <input type="password" id="certAdminPassword" placeholder="Enter password" aria-label="Admin password">
-                        <button id="certPasswordToggle" class="btn btn-outline" aria-label="Toggle password visibility">Show</button>
-                    </div>
-                    <div style="margin-top:0.75rem;display:flex;gap:0.5rem;">
-                        <button id="certAdminUnlock" class="btn btn-primary">Unlock</button>
-                        <button id="certAdminCancel" class="btn btn-outline">Close</button>
-                    </div>
-                    <p class="small muted" style="margin-top:0.5rem;">Password required to add, edit or delete certificates.</p>
-                </div>
-                <div id="certAdminPanel" style="display:none;">
-                    <form id="certForm" class="cert-form">
-                        <div class="form-group">
-                            <label for="certTitle">Title</label>
-                            <input id="certTitle" type="text" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="certIssuer">Issuer</label>
-                            <input id="certIssuer" type="text" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="certDate">Date</label>
-                            <input id="certDate" type="text" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="certImageUrl">Image URL</label>
-                            <input id="certImageUrl" type="text" placeholder="certificates/example.jpg (optional)">
-                        </div>
-                        <div class="form-group">
-                            <label><input id="certFeatured" type="checkbox"> Featured</label>
-                        </div>
-                        <div class="form-actions">
-                            <button type="submit" class="btn btn-primary">Save Certificate</button>
-                            <button type="button" id="certFormCancel" class="btn btn-outline">Cancel</button>
-                        </div>
-                    </form>
+    <!-- Certificate admin UI removed to disable CRUD; site remains read-only -->
 
-                    <h4 style="margin-top:1rem;">Existing Certificates</h4>
-                    <div id="certAdminList" class="cert-admin-list"></div>
-                </div>
-            </div>
-        </div>
-    </div>
     <script src="script.js"></script>
 </body>
 </html>
