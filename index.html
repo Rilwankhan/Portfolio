@@ -1,0 +1,861 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Rilwan Khan">
+    <title>Rilwankhan | Developer & Designer</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="icon" href="Rilwankhan.png" type="image/x-icon">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="#hero" class="logo">
+                <span class="gradient-text">Portfolio</span>
+            </a>
+            <div class="nav-links" id="navLinks">
+                <a href="#hero" class="nav-link active">Home</a>
+                <a href="#about-preview" class="nav-link">About</a>
+                <a href="#projects" class="nav-link">Projects</a>
+                <a href="#skills" class="nav-link">Skills</a>
+                <a href="#certificates" class="nav-link">Certificates</a>
+                <a href="#contact" class="nav-link">Contact</a>
+                <a href="about.html" class="nav-link">Full Profile</a>
+            </div>
+            <div class="nav-actions">
+                <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+                    <i class="fas fa-sun" id="sunIcon"></i>
+                    <i class="fas fa-moon" id="moonIcon" style="display: none;"></i>
+                </button>
+                <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero">
+        <div class="hero-bg-effects">
+            <div class="hero-glow hero-glow-1"></div>
+            <div class="hero-glow hero-glow-2"></div>
+        </div>
+        <div class="container hero-container">
+            <div class="hero-content animate-on-scroll">
+                <p class="hero-greeting">Hello, I'm <b style="color: #6366f1"> RILWANKHAN</b>
+                <p>
+                <h1 class="hero-title">
+                    <span class="gradient-text">Creative</span><br>Developer
+                </h1>
+                <p class="hero-description">
+                    Crafting beautiful digital experiences through code and design.
+                    Passionate about creating responsive, user-friendly web applications.
+                </p>
+                <div class="hero-tags">
+                    <span class="hero-tag">
+                        <i class="fas fa-code"></i>
+                        Web Developer
+                    </span>
+                    <span class="hero-tag">
+                        <i class="fas fa-palette"></i>
+                        UI/UX Designer
+                    </span>
+                    <span class="hero-tag">
+                        <i class="fas fa-briefcase"></i>
+                        Professional Freelancer
+                    </span>
+                </div>
+                <div class="hero-cta">
+                    <a href="Rilwankhan.pdf" class="btn btn-primary" download="Rilwankhan.pdf">Download CV</a>
+                    <a href="about.html" class="btn btn-outline">Learn More</a>
+                </div>
+            </div>
+            <div class="hero-image animate-on-scroll">
+                <div class="profile-wrapper">
+                    <div class="profile-circle">
+                        <!-- Replace src with your profile photo path -->
+                        <img src="Rilwankhan.png" alt="Rilwan Khan" class="profile-img profile-img-main"
+                            onerror="this.style.display='none'; this.parentElement.querySelector('.profile-fallback').style.display='flex';">
+                        <div class="profile-fallback" style="display: none;">
+                            <span>👨‍💻</span>
+                        </div>
+                    </div>
+                    <div class="profile-glow"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Preview Section -->
+    <section id="about-preview" class="about-preview">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <h2 class="section-title">What I <span class="gradient-text">Bring</span></h2>
+                <p class="section-description">
+                    With expertise in modern web technologies, I create digital solutions
+                    that combine aesthetics with functionality.
+                </p>
+            </div>
+            <div class="highlights-grid">
+                <div class="highlight-card animate-on-scroll">
+                    <div class="highlight-icon"><i class="fas fa-code"></i></div>
+                    <h3>Clean Code</h3>
+                    <p>Writing maintainable and scalable code</p>
+                </div>
+                <div class="highlight-card animate-on-scroll" style="animation-delay: 0.1s;">
+                    <div class="highlight-icon"><i class="fas fa-palette"></i></div>
+                    <h3>UI/UX Design</h3>
+                    <p>Creating intuitive user experiences</p>
+                </div>
+                <div class="highlight-card animate-on-scroll" style="animation-delay: 0.2s;">
+                    <div class="highlight-icon"><i class="fas fa-globe"></i></div>
+                    <h3>Responsive</h3>
+                    <p>Mobile-first development approach</p>
+                </div>
+                <div class="highlight-card animate-on-scroll" style="animation-delay: 0.3s;">
+                    <div class="highlight-icon"><i class="fas fa-bolt"></i></div>
+                    <h3>Performance</h3>
+                    <p>Optimized for speed and efficiency</p>
+                </div>
+            </div>
+            <div class="text-center animate-on-scroll">
+                <a href="about.html" class="btn btn-outline-primary">View Full Profile</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <div class="projects-header animate-on-scroll">
+                <span class="projects-eyebrow">Selected Work</span>
+                <h2 class="section-title">Featured <span class="gradient-text">Projects</span></h2>
+                <p class="section-description">Real-world applications built with modern technologies and a focus on
+                    user experience.</p>
+            </div>
+
+            <!-- Project 01 -->
+            <div class="project-row animate-on-scroll" data-project="0">
+                <div class="project-number-bg">01</div>
+                <div class="project-preview project-preview-left">
+                    <div class="browser-mockup">
+                        <div class="browser-bar">
+                            <div class="browser-dots"><span></span><span></span><span></span></div>
+                            <div class="browser-url">Bridge 2 Alumni</div>
+                        </div>
+                        <div class="browser-screen">
+                            <div class="project-screen-inner">
+                                <div class="screen-header-bar">
+                                    <div class="screen-logo">B2A</div>
+                                    <div class="screen-nav"><span></span><span></span><span></span></div>
+                                </div>
+                                <div class="screen-hero">
+                                    <div class="screen-title-block">
+                                        <div class="screen-line screen-line-lg"></div>
+                                        <div class="screen-line screen-line-md"></div>
+                                    </div>
+                                    <div class="screen-avatar-group">
+                                        <div class="screen-avatar"><i class="fas fa-user-tie" aria-hidden="true"></i>
+                                        </div>
+                                        <div class="screen-avatar"><i class="fas fa-laptop-code" aria-hidden="true"></i>
+                                        </div>
+                                        <div class="screen-avatar"><i class="fas fa-graduation-cap"
+                                                aria-hidden="true"></i></div>
+                                    </div>
+                                </div>
+                                <div class="screen-cards">
+                                    <div class="screen-card">
+                                        <div class="screen-card-icon"><i class="fas fa-graduation-cap"
+                                                aria-hidden="true"></i></div>
+                                        <div class="screen-card-lines">
+                                            <div></div>
+                                            <div></div>
+                                        </div>
+                                    </div>
+                                    <div class="screen-card">
+                                        <div class="screen-card-icon"><i class="fas fa-handshake"
+                                                aria-hidden="true"></i></div>
+                                        <div class="screen-card-lines">
+                                            <div></div>
+                                            <div></div>
+                                        </div>
+                                    </div>
+                                    <div class="screen-card">
+                                        <div class="screen-card-icon"><i class="fas fa-briefcase"
+                                                aria-hidden="true"></i></div>
+                                        <div class="screen-card-lines">
+                                            <div></div>
+                                            <div></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-preview-glow"></div>
+                </div>
+                <div class="project-info project-info-right">
+                    <div class="project-meta">
+                        <span class="project-num">01</span>
+                        <span class="project-category">Web Application</span>
+                    </div>
+                    <h3 class="project-title">Bridge 2 Alumni</h3>
+                    <p class="project-desc">An alumni networking platform that bridges the gap between students and
+                        graduates. Enables real-time connections, mentorship opportunities, and career networking within
+                        the college community.</p>
+                    <div class="project-highlights">
+                        <div class="project-highlight"><i class="fas fa-check-circle"></i> Real-time Firebase database
+                        </div>
+                        <div class="project-highlight"><i class="fas fa-check-circle"></i> Alumni directory & profiles
+                        </div>
+                        <div class="project-highlight"><i class="fas fa-check-circle"></i> Mentorship connect system
+                        </div>
+                        <div class="project-highlight"><i class="fas fa-check-circle"></i> Responsive across all devices
+                        </div>
+                    </div>
+                    <div class="project-stack">
+                        <span class="stack-tag">HTML</span>
+                        <span class="stack-tag">CSS</span>
+                        <span class="stack-tag">JavaScript</span>
+                        <span class="stack-tag">Firebase</span>
+                    </div>
+                    <div class="project-actions">
+                        <a href="https://nct-bca.github.io/Alumini-connect/" target="_blank" rel="noopener noreferrer"
+                            class="btn-live-demo">
+                            Live Demo <span class="demo-arrow">↗</span>
+                        </a>
+                        <button class="btn-explore" onclick="openProjectOverlay(0)">Explore Project</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 02 -->
+            <div class="project-row project-row-reverse animate-on-scroll" data-project="1">
+                <div class="project-number-bg">02</div>
+                <div class="project-info project-info-left">
+                    <div class="project-meta">
+                        <span class="project-num">02</span>
+                        <span class="project-category">E-Commerce</span>
+                    </div>
+                    <h3 class="project-title">E-Commerce Website</h3>
+                    <p class="project-desc">A modern full-featured e-commerce platform with a polished responsive UI,
+                        seamless product browsing experience, WhatsApp-based order integration, payment functionality,
+                        and complete data management.</p>
+                    <div class="project-highlights">
+                        <div class="project-highlight"><i class="fas fa-check-circle"></i> Responsive product catalog
+                        </div>
+                        <div class="project-highlight"><i class="fas fa-check-circle"></i> WhatsApp order integration
+                        </div>
+                        <div class="project-highlight"><i class="fas fa-check-circle"></i> Payment gateway support</div>
+                        <div class="project-highlight"><i class="fas fa-check-circle"></i> Dynamic data management</div>
+                    </div>
+                    <div class="project-stack">
+                        <span class="stack-tag">HTML</span>
+                        <span class="stack-tag">CSS</span>
+                        <span class="stack-tag">JavaScript</span>
+                        <span class="stack-tag">WhatsApp API</span>
+                    </div>
+                    <div class="project-actions">
+                        <a href="https://rilwankhan.github.io/TitliSilks/" target="_blank" rel="noopener noreferrer"
+                            class="btn-live-demo">
+                            Live Demo <span class="demo-arrow">↗</span>
+                        </a>
+                        <button class="btn-explore" onclick="openProjectOverlay(1)">Explore Project</button>
+                    </div>
+                </div>
+                <div class="project-preview project-preview-right">
+                    <div class="browser-mockup">
+                        <div class="browser-bar">
+                            <div class="browser-dots"><span></span><span></span><span></span></div>
+                            <div class="browser-url">E-commerce</div>
+                        </div>
+                        <div class="browser-screen">
+                            <div class="project-screen-inner project-screen-shop">
+                                <div class="screen-header-bar">
+                                    <div class="screen-logo screen-logo-with-icon"><i class="fas fa-cart-shopping"
+                                            aria-hidden="true"></i><span>Shop</span></div>
+                                    <div class="screen-nav"><span></span><span></span><span></span></div>
+                                </div>
+                                <div class="screen-products">
+                                    <div class="screen-product">
+                                        <div class="product-img-placeholder"><i class="fas fa-shirt"
+                                                aria-hidden="true"></i></div>
+                                        <div class="product-info-lines">
+                                            <div></div>
+                                            <div></div>
+                                        </div>
+                                    </div>
+                                    <div class="screen-product">
+                                        <div class="product-img-placeholder"><i class="fas fa-shoe-prints"
+                                                aria-hidden="true"></i></div>
+                                        <div class="product-info-lines">
+                                            <div></div>
+                                            <div></div>
+                                        </div>
+                                    </div>
+                                    <div class="screen-product">
+                                        <div class="product-img-placeholder"><i class="fas fa-clock"
+                                                aria-hidden="true"></i></div>
+                                        <div class="product-info-lines">
+                                            <div></div>
+                                            <div></div>
+                                        </div>
+                                    </div>
+                                    <div class="screen-product">
+                                        <div class="product-img-placeholder"><i class="fas fa-bag-shopping"
+                                                aria-hidden="true"></i></div>
+                                        <div class="product-info-lines">
+                                            <div></div>
+                                            <div></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="screen-whatsapp-btn"><i class="fab fa-whatsapp"></i> Order via WhatsApp
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-preview-glow"></div>
+                </div>
+            </div>
+
+            <!-- Project 03 -->
+            <div class="project-row animate-on-scroll" data-project="2">
+                <div class="project-number-bg">03</div>
+                <div class="project-preview project-preview-left">
+                    <div class="browser-mockup">
+                        <div class="browser-bar">
+                            <div class="browser-dots"><span></span><span></span><span></span></div>
+                            <div class="browser-url">Bottle Media</div>
+                        </div>
+                        <div class="browser-screen">
+                            <div class="project-screen-inner project-screen-agency">
+                                <div class="screen-header-bar">
+                                    <div class="screen-logo screen-logo-agency">
+                                        <i class="fas fa-rocket" aria-hidden="true"></i><span>Bottle Media</span>
+                                    </div>
+                                    <div class="screen-nav"><span></span><span></span><span></span></div>
+                                </div>
+                                <div class="agency-hero-tagline">
+                                    <div class="screen-line screen-line-lg"></div>
+                                    <div class="screen-line screen-line-md"></div>
+                                </div>
+                                <div class="agency-services-grid">
+                                    <div class="agency-service-card">
+                                        <i class="fas fa-laptop-code" aria-hidden="true"></i>
+                                        <span>Web Dev</span>
+                                    </div>
+                                    <div class="agency-service-card">
+                                        <i class="fas fa-chart-line" aria-hidden="true"></i>
+                                        <span>Marketing</span>
+                                    </div>
+                                    <div class="agency-service-card">
+                                        <i class="fas fa-robot" aria-hidden="true"></i>
+                                        <span>Chatbots</span>
+                                    </div>
+                                    <div class="agency-service-card">
+                                        <i class="fas fa-id-card" aria-hidden="true"></i>
+                                        <span>Branding</span>
+                                    </div>
+                                </div>
+                                <div class="agency-footer-bar">
+                                    <span class="agency-badge"><i class="fas fa-bolt"></i> Digital Solutions</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-preview-glow project-preview-glow-bottle"></div>
+                </div>
+                <div class="project-info project-info-right">
+                    <div class="project-meta">
+                        <span class="project-num">03</span>
+                        <span class="project-category">Startup / Business Website</span>
+                    </div>
+                    <h3 class="project-title">Bottle Media</h3>
+                    <p class="project-desc">A professional digital solutions website created for the Bottle Media
+                        startup, showcasing its services, brand identity, business process, achievements, and
+                        client-focused digital solutions.</p>
+                    <div class="project-highlights">
+                        <div class="project-highlight"><i class="fas fa-check-circle"></i> Startup-focused responsive
+                            design</div>
+                        <div class="project-highlight"><i class="fas fa-check-circle"></i> Service showcase: Web Dev,
+                            Marketing & AI Chatbots</div>
+                        <div class="project-highlight"><i class="fas fa-check-circle"></i> Interactive process, clients
+                            & testimonials</div>
+                        <div class="project-highlight"><i class="fas fa-check-circle"></i> Contact & inquiry integration
+                        </div>
+                    </div>
+                    <div class="project-stack">
+                        <span class="stack-tag">HTML5</span>
+                        <span class="stack-tag">CSS3</span>
+                        <span class="stack-tag">JavaScript</span>
+                        <span class="stack-tag">Responsive UI</span>
+                        <span class="stack-tag">UI/UX</span>
+                    </div>
+                    <div class="project-actions">
+                        <a href="https://rilwankhan.github.io/bottlemedia/" target="_blank" rel="noopener noreferrer"
+                            class="btn-live-demo">
+                            Live Project <span class="demo-arrow">↗</span>
+                        </a>
+                        <button class="btn-explore" onclick="openProjectOverlay(2)">Explore Project</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technical Skills Section -->
+    <section id="skills" class="skills">
+        <div class="skills-bg-grid" aria-hidden="true"></div>
+        <div class="skills-bg-glow" aria-hidden="true"></div>
+        <div class="container">
+            <div class="skills-header animate-on-scroll">
+                <span class="skills-eyebrow">Expertise</span>
+                <h2 class="section-title">Technical <span class="gradient-text">Arsenal</span></h2>
+                <p class="section-description">Technologies I use to build modern digital experiences.</p>
+            </div>
+
+            <div class="skills-showcase animate-on-scroll">
+                <nav class="skills-nav" role="tablist" aria-label="Skill categories">
+                    <button type="button" class="skills-nav-item active" role="tab" aria-selected="true"
+                        aria-controls="panel-languages" data-category="languages">
+                        <span class="skills-nav-index">01</span>
+                        <span class="skills-nav-label">Languages</span>
+                        <span class="skills-nav-indicator"></span>
+                    </button>
+                    <button type="button" class="skills-nav-item" role="tab" aria-selected="false"
+                        aria-controls="panel-web" data-category="web">
+                        <span class="skills-nav-index">02</span>
+                        <span class="skills-nav-label">Web Development</span>
+                        <span class="skills-nav-indicator"></span>
+                    </button>
+                    <button type="button" class="skills-nav-item" role="tab" aria-selected="false"
+                        aria-controls="panel-backend" data-category="backend">
+                        <span class="skills-nav-index">03</span>
+                        <span class="skills-nav-label">Frameworks &amp; Backend</span>
+                        <span class="skills-nav-indicator"></span>
+                    </button>
+                    <button type="button" class="skills-nav-item" role="tab" aria-selected="false"
+                        aria-controls="panel-databases" data-category="databases">
+                        <span class="skills-nav-index">04</span>
+                        <span class="skills-nav-label">Databases</span>
+                        <span class="skills-nav-indicator"></span>
+                    </button>
+                    <button type="button" class="skills-nav-item" role="tab" aria-selected="false"
+                        aria-controls="panel-tools" data-category="tools">
+                        <span class="skills-nav-index">05</span>
+                        <span class="skills-nav-label">Tools &amp; Platforms</span>
+                        <span class="skills-nav-indicator"></span>
+                    </button>
+                    <button type="button" class="skills-nav-item" role="tab" aria-selected="false"
+                        aria-controls="panel-ai" data-category="ai">
+                        <span class="skills-nav-index">06</span>
+                        <span class="skills-nav-label">AI Tools</span>
+                        <span class="skills-nav-indicator"></span>
+                    </button>
+                </nav>
+
+                <div class="skills-mobile-controls" id="skillsMobileControls"
+                    aria-label="Skill category mobile navigation">
+                    <button type="button" class="skills-mobile-btn skills-mobile-prev" id="skillsPrevBtn"
+                        aria-label="Previous skill category" disabled>
+                        <span class="btn-arrow" aria-hidden="true">←</span> Previous
+                    </button>
+                    <button type="button" class="skills-mobile-btn skills-mobile-next" id="skillsNextBtn"
+                        aria-label="Next skill category">
+                        Next <span class="btn-arrow" aria-hidden="true">→</span>
+                    </button>
+                </div>
+
+                <div class="skills-stage">
+                    <div class="skills-orbit" aria-hidden="true">
+                        <div class="skills-orbit-ring"></div>
+                        <div class="skills-orbit-ring skills-orbit-ring-inner"></div>
+                        <span class="skills-orbit-node" data-orbit="0"></span>
+                        <span class="skills-orbit-node" data-orbit="1"></span>
+                        <span class="skills-orbit-node" data-orbit="2"></span>
+                        <span class="skills-orbit-node" data-orbit="3"></span>
+                        <span class="skills-orbit-node" data-orbit="4"></span>
+                        <span class="skills-orbit-node" data-orbit="5"></span>
+                        <div class="skills-orbit-core">
+                            <i class="fas fa-microchip"></i>
+                        </div>
+                    </div>
+
+                    <div class="skills-panels">
+                        <div class="skills-panel active" id="panel-languages" role="tabpanel" data-category="languages"
+                            aria-hidden="false">
+                            <div class="skills-panel-meta">
+                                <span class="skills-panel-tag">Languages</span>
+                                <p class="skills-panel-desc">Core languages for structured, scalable application logic.
+                                </p>
+                            </div>
+                            <div class="skills-grid">
+                                <article class="skill-chip"><span class="skill-chip-icon"><i class="fab fa-java"
+                                            aria-hidden="true"></i></span><span class="skill-chip-name">Java</span>
+                                </article>
+                                <article class="skill-chip"><span class="skill-chip-icon"><i class="fab fa-js"
+                                            aria-hidden="true"></i></span><span
+                                        class="skill-chip-name">JavaScript</span></article>
+                                <article class="skill-chip"><span class="skill-chip-icon"><i class="fab fa-html5"
+                                            aria-hidden="true"></i></span><span class="skill-chip-name">HTML5</span>
+                                </article>
+                                <article class="skill-chip"><span class="skill-chip-icon"><i class="fab fa-css3-alt"
+                                            aria-hidden="true"></i></span><span class="skill-chip-name">CSS3</span>
+                                </article>
+                            </div>
+                        </div>
+
+                        <div class="skills-panel" id="panel-web" role="tabpanel" data-category="web" aria-hidden="true">
+                            <div class="skills-panel-meta">
+                                <span class="skills-panel-tag">Web Development</span>
+                                <p class="skills-panel-desc">Responsive interfaces, user experience, and connected web
+                                    systems.</p>
+                            </div>
+                            <div class="skills-grid">
+                                <article class="skill-chip"><span class="skill-chip-icon"><i
+                                            class="fas fa-mobile-screen-button" aria-hidden="true"></i></span><span
+                                        class="skill-chip-name">Responsive Web Design</span></article>
+                                <article class="skill-chip"><span class="skill-chip-icon"><i
+                                            class="fas fa-compass-drafting" aria-hidden="true"></i></span><span
+                                        class="skill-chip-name">UI/UX</span></article>
+                                <article class="skill-chip"><span class="skill-chip-icon"><i class="fas fa-plug"
+                                            aria-hidden="true"></i></span><span class="skill-chip-name">API
+                                        Integration</span></article>
+                            </div>
+                        </div>
+
+                        <div class="skills-panel" id="panel-backend" role="tabpanel" data-category="backend"
+                            aria-hidden="true">
+                            <div class="skills-panel-meta">
+                                <span class="skills-panel-tag">Frameworks &amp; Backend</span>
+                                <p class="skills-panel-desc">Server-side runtime, web frameworks, and robust RESTful API
+                                    development with AI-assisted development.</p>
+                            </div>
+                            <div class="skills-grid">
+                                <article class="skill-chip"><span class="skill-chip-icon"><i class="fab fa-node-js"
+                                            aria-hidden="true"></i></span><span class="skill-chip-name">Node.js</span>
+                                </article>
+                                <article class="skill-chip"><span class="skill-chip-icon"><i class="fas fa-server"
+                                            aria-hidden="true"></i></span><span
+                                        class="skill-chip-name">Express.js</span>
+                                </article>
+                                <article class="skill-chip"><span class="skill-chip-icon"><i
+                                            class="fas fa-network-wired" aria-hidden="true"></i></span><span
+                                        class="skill-chip-name">REST API Development</span>
+                                </article>
+                            </div>
+                        </div>
+
+                        <div class="skills-panel" id="panel-databases" role="tabpanel" data-category="databases"
+                            aria-hidden="true">
+                            <div class="skills-panel-meta">
+                                <span class="skills-panel-tag">Databases</span>
+                                <p class="skills-panel-desc">Cloud, document, and client-side data persistence
+                                    solutions.</p>
+                            </div>
+                            <div class="skills-grid">
+                                <article class="skill-chip"><span class="skill-chip-icon"><i class="fas fa-fire"
+                                            aria-hidden="true"></i></span><span class="skill-chip-name">Firebase</span>
+                                </article>
+                                <article class="skill-chip"><span class="skill-chip-icon"><i class="fas fa-leaf"
+                                            aria-hidden="true"></i></span><span class="skill-chip-name">MongoDB</span>
+                                </article>
+                                <article class="skill-chip"><span class="skill-chip-icon"><i class="fas fa-database"
+                                            aria-hidden="true"></i></span><span
+                                        class="skill-chip-name">LocalStorage</span></article>
+                            </div>
+                        </div>
+
+                        <div class="skills-panel" id="panel-tools" role="tabpanel" data-category="tools"
+                            aria-hidden="true">
+                            <div class="skills-panel-meta">
+                                <span class="skills-panel-tag">Tools &amp; Platforms</span>
+                                <p class="skills-panel-desc">Design, development, version control, and deployment
+                                    workflow.</p>
+                            </div>
+                            <div class="skills-grid">
+                                <article class="skill-chip"><span class="skill-chip-icon"><i class="fas fa-code"
+                                            aria-hidden="true"></i></span><span class="skill-chip-name">VS Code</span>
+                                </article>
+                                <article class="skill-chip"><span class="skill-chip-icon"><i class="fab fa-github"
+                                            aria-hidden="true"></i></span><span class="skill-chip-name">GitHub</span>
+                                </article>
+                                <article class="skill-chip"><span class="skill-chip-icon"><i class="fab fa-figma"
+                                            aria-hidden="true"></i></span><span class="skill-chip-name">Figma</span>
+                                </article>
+                                <article class="skill-chip"><span class="skill-chip-icon"><i
+                                            class="fas fa-arrow-pointer" aria-hidden="true"></i></span><span
+                                        class="skill-chip-name">Cursor</span></article>
+                                <article class="skill-chip"><span class="skill-chip-icon"><i
+                                            class="fas fa-cloud-arrow-up" aria-hidden="true"></i></span><span
+                                        class="skill-chip-name">Vercel</span></article>
+                            </div>
+                        </div>
+
+                        <div class="skills-panel" id="panel-ai" role="tabpanel" data-category="ai" aria-hidden="true">
+                            <div class="skills-panel-meta">
+                                <span class="skills-panel-tag">AI Tools</span>
+                                <p class="skills-panel-desc">AI-assisted coding environments for faster, smarter
+                                    delivery.</p>
+                            </div>
+                            <div class="skills-grid">
+                                <article class="skill-chip"><span class="skill-chip-icon"><i class="fas fa-robot"
+                                            aria-hidden="true"></i></span><span class="skill-chip-name">Claude
+                                        Code</span></article>
+                                <article class="skill-chip"><span class="skill-chip-icon"><i
+                                            class="fas fa-wand-magic-sparkles" aria-hidden="true"></i></span><span
+                                        class="skill-chip-name">Antigravity</span></article>
+                                <article class="skill-chip"><span class="skill-chip-icon"><i
+                                            class="fas fa-arrow-pointer" aria-hidden="true"></i></span><span
+                                        class="skill-chip-name">Cursor</span></article>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Detail Overlay -->
+    <div id="projectOverlay" class="project-overlay" aria-hidden="true">
+        <div class="project-overlay-backdrop" onclick="closeProjectOverlay()"></div>
+        <div class="project-overlay-panel">
+            <button class="project-overlay-close" onclick="closeProjectOverlay()" aria-label="Close">
+                <i class="fas fa-times"></i>
+            </button>
+            <div class="project-overlay-content" id="projectOverlayContent"></div>
+        </div>
+    </div>
+
+    <!-- Certificates Section -->
+    <section id="certificates" class="certificates">
+        <div class="container">
+            <h2 class="section-title scroll-animate" data-animation="fadeInUp">Certificates & Achievements</h2>
+            <p class="section-subtitle scroll-animate" data-animation="fadeInUp" data-delay="200">Showcasing my
+                continuous learning journey and professional growth</p>
+            <div class="certificates-grid">
+                <div class="certificate-card scroll-animate" data-animation="fadeInUp" data-delay="100"
+                    onclick="openCertificate('web-dev')">
+                    <div class="certificate-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h3>Full-Stack Development Certification</h3>
+                    <p>Advanced certification in modern web technologies including HTML5, CSS3, JavaScript, and
+                        responsive design principles.</p>
+                    <span class="certificate-date">2025</span>
+                    <div class="view-certificate">Click to view certificate</div>
+                </div>
+                <div class="certificate-card scroll-animate" data-animation="fadeInUp" data-delay="200"
+                    onclick="openCertificate('Ai-full')">
+                    <div class="certificate-icon">
+                        <i class="fas fa-palette"></i>
+                    </div>
+                    <h3>AI Full-Stack Development Certificate</h3>
+                    <p>Advanced certification in AI Full Stack Development, covering modern web technologies, full-stack
+                        application
+                        development, AI integration, and responsive web design principles.</p>
+                    <span class="certificate-date">2025</span>
+                    <div class="view-certificate">Click to view certificate</div>
+                </div>
+                <div class="certificate-card scroll-animate" data-animation="fadeInUp" data-delay="200"
+                    onclick="openCertificate('ui-ux')">
+                    <div class="certificate-icon">
+                        <i class="fas fa-palette"></i>
+                    </div>
+                    <h3>UI/UX Design Certificate</h3>
+                    <p>Professional certification in user interface and user experience design, focusing on creating
+                        intuitive and engaging digital experiences.</p>
+                    <span class="certificate-date">2025</span>
+                    <div class="view-certificate">Click to view certificate</div>
+                </div>
+                <!-- <div class="certificate-card scroll-animate" data-animation="fadeInUp" data-delay="300"
+                    onclick="openCertificate('python')">
+                    <div class="certificate-icon">
+                        <i class="fab fa-python"></i>
+                    </div>
+                    <h3>Python Programming</h3>
+                    <p>Foundation certification in Python programming, covering basic syntax, data structures, and
+                        problem-solving techniques.</p>
+                    <span class="certificate-date">2025</span>
+                    <div class="view-certificate">Click to view certificate</div>
+                </div> -->
+                <!-- <div class="certificate-card scroll-animate" data-animation="fadeInUp" data-delay="400"
+                    onclick="openCertificate('java')">
+                    <div class="certificate-icon">
+                        <i class="fab fa-java"></i>
+                    </div>
+                    <h3>Java Programming</h3>
+                    <p>Basic certification in Java programming fundamentals, object-oriented programming concepts, and
+                        core Java libraries.</p>
+                    <span class="certificate-date">2025</span>
+                    <div class="view-certificate">Click to view certificate</div>
+                </div> -->
+                <div class="certificate-card scroll-animate" data-animation="fadeInUp" data-delay="500"
+                    onclick="openCertificate('hackathon')">
+                    <div class="certificate-icon">
+                        <i class="fas fa-trophy"></i>
+                    </div>
+                    <h3>Jet Hackathon Runner Up</h3>
+                    <p>Achieved runner-up position in Jet Hackathon, demonstrating exceptional problem-solving skills
+                        and innovative thinking in competitive programming.</p>
+                    <span class="certificate-date">2025</span>
+                    <div class="view-certificate">Click to view certificate</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <h2 class="section-title">Get In <span class="gradient-text">Touch</span></h2>
+                <p class="section-description">
+                    Have a project in mind or want to collaborate? I'd love to hear from you.
+                    Let's create something amazing together.
+                </p>
+            </div>
+
+            <div class="contact-grid">
+                <!-- Contact Form -->
+                <div class="contact-form-wrapper animate-on-scroll">
+                    <div class="glass-card">
+                        <h3>Send a Message</h3>
+                        <form id="contactForm" action="https://formspree.io/f/myzraeew" method="POST">
+                            <div class="form-group">
+                                <label for="name">Name</label>
+                                <input type="text" id="name" name="name" required placeholder="Your name">
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" name="email" required placeholder="your@email.com">
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Message</label>
+                                <textarea id="message" name="message" required rows="5"
+                                    placeholder="Tell me about your project..."></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-full">
+                                <i class="fas fa-paper-plane"></i>
+                                Send Message
+                            </button>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- Contact Info & Social -->
+                <div class="contact-info-wrapper">
+                    <!-- Contact Info -->
+                    <div class="glass-card animate-on-scroll" style="animation-delay: 0.1s;">
+                        <h3>Contact Info</h3>
+                        <div class="contact-info-list">
+                            <div class="contact-info-item">
+                                <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+                                <div>
+                                    <p class="contact-label">Email</p>
+                                    <p class="contact-value">rilwankhan2005@gmail.com</p>
+                                </div>
+                            </div>
+                            <div class="contact-info-item">
+                                <div class="contact-icon"><i class="fas fa-phone"></i></div>
+                                <div>
+                                    <p class="contact-label">Phone</p>
+                                    <p class="contact-value">+91 8608865811</p>
+                                </div>
+                            </div>
+                            <div class="contact-info-item">
+                                <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
+                                <div>
+                                    <p class="contact-label">Location</p>
+                                    <p class="contact-value">Trichy, India</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Social Links -->
+                    <div class="glass-card animate-on-scroll" style="animation-delay: 0.2s;">
+                        <h3>Follow Me</h3>
+                        <div class="social-grid">
+                            <a href="https://github.com/Rilwankhan" target="_blank" rel="noopener noreferrer"
+                                class="social-link">
+                                <i class="fab fa-github"></i>
+                                <div class="social-info">
+                                    <span class="social-name">GitHub</span>
+                                    <span class="social-handle">@Rilwankhan</span>
+                                </div>
+                            </a>
+                            <a href="https://www.instagram.com/kd_paiyan_rilwan_07" target="_blank"
+                                rel="noopener noreferrer" class="social-link">
+                                <i class="fab fa-instagram"></i>
+                                <div class="social-info">
+                                    <span class="social-name">Instagram</span>
+                                    <span class="social-handle">@kd_paiyan_rilwan_07</span>
+                                </div>
+                            </a>
+                            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer"
+                                class="social-link">
+                                <i class="fab fa-linkedin"></i>
+                                <div class="social-info">
+                                    <span class="social-name">LinkedIn</span>
+                                    <span class="social-handle">Rilwan Khan</span>
+                                </div>
+                            </a>
+                            <a href="mailto:rilwankhan2005@gmail.com" class="social-link">
+                                <i class="fas fa-envelope"></i>
+                                <div class="social-info">
+                                    <span class="social-name">Email</span>
+                                    <span class="social-handle">rilwankhan2005@gmail.com</span>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-container">
+            <p>© 2025 Rilwan Khan. Built with passion.</p>
+            <div class="footer-social">
+                <a href="https://github.com/Rilwankhan" target="_blank" rel="noopener noreferrer"><i
+                        class="fab fa-github"></i></a>
+                <a href="https://www.instagram.com/kd_paiyan_rilwan_07" target="_blank" rel="noopener noreferrer"><i
+                        class="fab fa-instagram"></i></a>
+                <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer"><i
+                        class="fab fa-linkedin"></i></a>
+                <a href="mailto:rilwankhan2005@gmail.com"><i class="fas fa-envelope"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Certificate Modal -->
+    <div id="certificateModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <img id="certificateImage" src="" alt="Certificate">
+            <h3 id="certificateTitle"></h3>
+        </div>
+    </div>
+
+    <!-- Certificate admin UI removed to disable CRUD; site remains read-only -->
+
+    <script src="script.js"></script>
+</body>
+
+</html>

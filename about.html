@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="About Rilwan Khan - Web Developer & UI/UX Designer with expertise in HTML, CSS, JavaScript, and modern web technologies.">
+    <title>Rilwan Khan</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <span class="gradient-text">Portfolio</span>
+            </a>
+            <div class="nav-links" id="navLinks">
+                <a href="index.html#hero" class="nav-link">Home</a>
+                <a href="index.html#about-preview" class="nav-link">About</a>
+                <a href="index.html#certificates" class="nav-link">Certificates</a>
+                <a href="index.html#contact" class="nav-link">Contact</a>
+                <a href="about.html" class="nav-link active">Full Profile</a>
+            </div>
+            <div class="nav-actions">
+                <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+                    <i class="fas fa-sun" id="sunIcon"></i>
+                    <i class="fas fa-moon" id="moonIcon" style="display: none;"></i>
+                </button>
+                <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <main class="about-page">
+        <div class="container">
+            <!-- Header -->
+            <div class="section-header animate-on-scroll">
+                <h1 class="section-title">About <span class="gradient-text">Me</span></h1>
+                <p class="section-description">
+                    A passionate developer with a keen eye for design and a love for creating
+                    seamless digital experiences.
+                </p>
+            </div>
+
+            <!-- Bio Section -->
+            <div class="bio-section animate-on-scroll">
+                <div class="glass-card bio-card">
+                    <div class="bio-content">
+                        <div class="bio-image">
+                            <!-- Replace src with your profile photo path -->
+                            <img src="Rilwankhan.png" alt="Rilwan Khan"
+                                onerror="this.style.display='none'; this.parentElement.querySelector('.bio-fallback').style.display='flex';">
+                            <div class="bio-fallback" style="display: none;">
+                                <span>👨‍💻</span>
+                            </div>
+                        </div>
+                        <div class="bio-text">
+                            <h2>Hello! I'm a <span class="gradient-text">Web Developer</span></h2>
+                            <p>
+                                I’m a creative developer and UI/UX designer focused on building modern, responsive, and
+                                user-centered digital experiences. I combine clean code, thoughtful design, and modern
+                                technologies to turn ideas into functional and visually engaging products.
+                            </p>
+                            <p>
+                                As a professional freelancer, I’ve worked on business websites, e-commerce platforms,
+                                and custom digital solutions, continuously strengthening my development, design, and
+                                problem-solving skills.
+                            </p>
+                            <p>
+                                Whether it’s a complete website, UI design, or a complex feature, I approach every
+                                project with attention to detail, clean implementation, and a focus on delivering real
+                                value to clients.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Values Section -->
+            <div class="values-section animate-on-scroll">
+                <div class="glass-card">
+                    <h2 class="section-subtitle">My <span class="gradient-text">Values</span></h2>
+                    <div class="values-grid">
+                        <div class="value-item">
+                            <i class="fas fa-lightbulb"></i>
+                            <h4>Innovation</h4>
+                            <p>Always exploring new technologies and creative solutions</p>
+                        </div>
+                        <div class="value-item">
+                            <i class="fas fa-handshake"></i>
+                            <h4>Collaboration</h4>
+                            <p>Working closely with clients to achieve their vision</p>
+                        </div>
+                        <div class="value-item">
+                            <i class="fas fa-trophy"></i>
+                            <h4>Excellence</h4>
+                            <p>Delivering high-quality work that exceeds expectations</p>
+                        </div>
+                        <div class="value-item">
+                            <i class="fas fa-clock"></i>
+                            <h4>Reliability</h4>
+                            <p>Meeting deadlines and maintaining consistent communication</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <!-- Back to Home -->
+            <div class="text-center animate-on-scroll" style="margin-top: 3rem;">
+                <a href="index.html" class="btn btn-outline-primary">
+                    <i class="fas fa-arrow-left"></i> Back to Home
+                </a>
+            </div>
+
+            <!-- Contact Section -->
+            <section id="contact" class="contact">
+                <div class="container">
+                    <div class="section-header animate-on-scroll">
+                        <h2 class="section-title">Get In <span class="gradient-text">Touch</span></h2>
+                        <p class="section-description">
+                            Have a project in mind or want to collaborate? I'd love to hear from you.
+                            Let's create something amazing together.
+                        </p>
+                    </div>
+
+                    <div class="contact-grid">
+                        <!-- Contact Form -->
+                        <div class="contact-form-wrapper animate-on-scroll">
+                            <div class="glass-card">
+                                <h3>Send a Message</h3>
+                                <form id="contactForm" action="https://formspree.io/f/myzraeew" method="POST">
+                                    <div class="form-group">
+                                        <label for="name">Name</label>
+                                        <input type="text" id="name" name="name" required placeholder="Your name">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="email">Email</label>
+                                        <input type="email" id="email" name="email" required
+                                            placeholder="your@email.com">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="message">Message</label>
+                                        <textarea id="message" name="message" required rows="5"
+                                            placeholder="Tell me about your project..."></textarea>
+                                    </div>
+                                    <button type="submit" class="btn btn-primary btn-full">
+                                        <i class="fas fa-paper-plane"></i>
+                                        Send Message
+                                    </button>
+                                </form>
+                            </div>
+                        </div>
+
+                        <!-- Contact Info & Social -->
+                        <div class="contact-info-wrapper">
+                            <!-- Contact Info -->
+                            <div class="glass-card animate-on-scroll" style="animation-delay: 0.1s;">
+                                <h3>Contact Info</h3>
+                                <div class="contact-info-list">
+                                    <div class="contact-info-item">
+                                        <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+                                        <div>
+                                            <p class="contact-label">Email</p>
+                                            <p class="contact-value">rilwankhan2005@gmail.com</p>
+                                        </div>
+                                    </div>
+                                    <div class="contact-info-item">
+                                        <div class="contact-icon"><i class="fas fa-phone"></i></div>
+                                        <div>
+                                            <p class="contact-label">Phone</p>
+                                            <p class="contact-value">+91 8608865811</p>
+                                        </div>
+                                    </div>
+                                    <div class="contact-info-item">
+                                        <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
+                                        <div>
+                                            <p class="contact-label">Location</p>
+                                            <p class="contact-value">Trichy, India</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Social Links -->
+                            <div class="glass-card animate-on-scroll" style="animation-delay: 0.2s;">
+                                <h3>Follow Me</h3>
+                                <div class="social-grid">
+                                    <a href="https://github.com/Rilwankhan" target="_blank" rel="noopener noreferrer"
+                                        class="social-link">
+                                        <i class="fab fa-github"></i>
+                                        <div class="social-info">
+                                            <span class="social-name">GitHub</span>
+                                            <span class="social-handle">@Rilwankhan</span>
+                                        </div>
+                                    </a>
+                                    <a href="https://www.instagram.com/kd_paiyan_rilwan_07" target="_blank"
+                                        rel="noopener noreferrer" class="social-link">
+                                        <i class="fab fa-instagram"></i>
+                                        <div class="social-info">
+                                            <span class="social-name">Instagram</span>
+                                            <span class="social-handle">@kd_paiyan_rilwan_07</span>
+                                        </div>
+                                    </a>
+                                    <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer"
+                                        class="social-link">
+                                        <i class="fab fa-linkedin"></i>
+                                        <div class="social-info">
+                                            <span class="social-name">LinkedIn</span>
+                                            <span class="social-handle">Rilwan Khan</span>
+                                        </div>
+                                    </a>
+                                    <a href="mailto:rilwankhan2005@gmail.com" class="social-link">
+                                        <i class="fas fa-envelope"></i>
+                                        <div class="social-info">
+                                            <span class="social-name">Email</span>
+                                            <span class="social-handle">rilwankhan2005@gmail.com</span>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+
+
+
+
+
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-container">
+            <p>© 2025 Rilwan Khan. Built with passion.</p>
+            <div class="footer-social">
+                <a href="https://github.com/Rilwankhan" target="_blank" rel="noopener noreferrer"><i
+                        class="fab fa-github"></i></a>
+                <a href="https://www.instagram.com/kd_paiyan_rilwan_07" target="_blank" rel="noopener noreferrer"><i
+                        class="fab fa-instagram"></i></a>
+                <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer"><i
+                        class="fab fa-linkedin"></i></a>
+                <a href="mailto:rilwankhan2005@gmail.com"><i class="fas fa-envelope"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
