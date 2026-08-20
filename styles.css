@@ -1344,17 +1344,19 @@ body:not(.dark) .project-overlay-panel {
         margin-bottom: 5rem;
     }
 
-    .project-number-bg {
-        font-size: 5rem;
-        opacity: 0.2;
-    }
-
-    .project-row-reverse .project-info {
+    /* Keep every project in the same mobile order:
+       Browser → Project Information */
+    .project-preview {
         order: 1;
     }
 
-    .project-row-reverse .project-preview {
+    .project-info {
         order: 2;
+    }
+
+    .project-number-bg {
+        font-size: 5rem;
+        opacity: 0.2;
     }
 
     .project-desc {
