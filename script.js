@@ -706,19 +706,19 @@ function openCertificate(certType) {
         },
         'ui-ux': {
             image: 'https://rilwankhan2023.neocities.org/Portfolio%20images/ui.jpg',
-            title: 'UI/UX Design Certificate'
+            title: 'UI/UX Design Certification'
         },
         'Ai-full': {
             image: 'https://rilwankhan2023.neocities.org/Portfolio%20images/fullai.jpg',
-            title: 'AI Full-Stack Development Certificate'
+            title: 'AI Full-Stack Development Certification'
         },
-        // 'java': {
-        //     image: 'fullai.jpg',
-        //     title: 'Java Programming Certificate'
-        // },
+        'B2A': {
+            image: 'https://rilwankhan2023.neocities.org/Portfolio%20images/fullai.jpg',
+            title: 'B2A Project Completion Certification'
+        },
         'hackathon': {
             image: 'https://rilwankhan2023.neocities.org/Portfolio%20images/JET.jpg',
-            title: 'Jet Hackathon Runner Up'
+            title: 'Jet Hackathon Runner UP Certification'
         }
     };
 
