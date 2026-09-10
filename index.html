@@ -4,12 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Rilwan Khan">
-    <title>Rilwankhan | Developer & Designer</title>
+    <meta name="description" content="Rilwan Khan - Web & Software Developer with expertise in HTML, CSS, JavaScript, and modern web technologies.">
+    <title>Rilwankhan | Web & Software Developer</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="icon" href="Rilwankhan.png" type="image/x-icon">
+    <link rel="icon" href="./Rilwankhan.png" type="image/png">
     <link
         href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
@@ -68,6 +68,11 @@
                         <i class="fas fa-code"></i>
                         Web Developer
                     </span>
+                    <span class="hero-tag">
+                        <i class="fa-solid fa-laptop-code"></i>
+                        Software Developer
+                    </span>
+                    <br>
                     <span class="hero-tag">
                         <i class="fas fa-palette"></i>
                         UI/UX Designer
@@ -596,9 +601,13 @@
                                 <article class="skill-chip"><span class="skill-chip-icon"><i class="fab fa-figma"
                                             aria-hidden="true"></i></span><span class="skill-chip-name">Figma</span>
                                 </article>
-                                <article class="skill-chip"><span class="skill-chip-icon"><i
-                                            class="fas fa-arrow-pointer" aria-hidden="true"></i></span><span
-                                        class="skill-chip-name">Cursor</span></article>
+                                <article class="skill-chip">
+                                    <span class="skill-chip-icon">
+                                        <i class="fas fa-cube" aria-hidden="true"></i>
+                                    </span>
+                                    <span class="skill-chip-name">Cursor</span>
+                                </article>
+
                                 <article class="skill-chip"><span class="skill-chip-icon"><i
                                             class="fas fa-cloud-arrow-up" aria-hidden="true"></i></span><span
                                         class="skill-chip-name">Vercel</span></article>
@@ -618,9 +627,13 @@
                                 <article class="skill-chip"><span class="skill-chip-icon"><i
                                             class="fas fa-wand-magic-sparkles" aria-hidden="true"></i></span><span
                                         class="skill-chip-name">Antigravity</span></article>
-                                <article class="skill-chip"><span class="skill-chip-icon"><i
-                                            class="fas fa-arrow-pointer" aria-hidden="true"></i></span><span
-                                        class="skill-chip-name">Cursor</span></article>
+                                <article class="skill-chip">
+                                    <span class="skill-chip-icon">
+                                        <i class="fas fa-cube" aria-hidden="true"></i>
+                                    </span>
+                                    <span class="skill-chip-name">Cursor</span>
+                                </article>
+
                             </div>
                         </div>
                     </div>
@@ -647,6 +660,17 @@
             <p class="section-subtitle scroll-animate" data-animation="fadeInUp" data-delay="200">Showcasing my
                 continuous learning journey and professional growth</p>
             <div class="certificates-grid">
+                <div class="certificate-card scroll-animate" data-animation="fadeInUp" data-delay="300"
+                    onclick="openCertificate('B2A')">
+                    <div class="certificate-icon">
+                        <i class="fa-solid fa-people-arrows"></i>
+                    </div>
+                    <h3>B2A Project Completion Certification</h3>
+                    <p>Successfully delivering the B2A platform from initial planning to deployment, 
+                        covering feature management, system integration, and launch techniques.</p>
+                    <span class="certificate-date">2025</span>
+                    <div class="view-certificate">Click to view certificate</div>
+                </div>
                 <div class="certificate-card scroll-animate" data-animation="fadeInUp" data-delay="100"
                     onclick="openCertificate('web-dev')">
                     <div class="certificate-icon">
@@ -661,9 +685,9 @@
                 <div class="certificate-card scroll-animate" data-animation="fadeInUp" data-delay="200"
                     onclick="openCertificate('Ai-full')">
                     <div class="certificate-icon">
-                        <i class="fas fa-palette"></i>
+                        <i class="fa-solid fa-brain" aria-hidden="true"></i>
                     </div>
-                    <h3>AI Full-Stack Development Certificate</h3>
+                    <h3>AI Full-Stack Development Certification</h3>
                     <p>Advanced certification in AI Full Stack Development, covering modern web technologies, full-stack
                         application
                         development, AI integration, and responsive web design principles.</p>
@@ -673,25 +697,15 @@
                 <div class="certificate-card scroll-animate" data-animation="fadeInUp" data-delay="200"
                     onclick="openCertificate('ui-ux')">
                     <div class="certificate-icon">
-                        <i class="fas fa-palette"></i>
+                        <i class="fas fa-sitemap" aria-hidden="true"></i>
                     </div>
-                    <h3>UI/UX Design Certificate</h3>
+                    <h3>UI/UX Design Certification</h3>
                     <p>Professional certification in user interface and user experience design, focusing on creating
                         intuitive and engaging digital experiences.</p>
                     <span class="certificate-date">2025</span>
                     <div class="view-certificate">Click to view certificate</div>
                 </div>
-                <!-- <div class="certificate-card scroll-animate" data-animation="fadeInUp" data-delay="300"
-                    onclick="openCertificate('python')">
-                    <div class="certificate-icon">
-                        <i class="fab fa-python"></i>
-                    </div>
-                    <h3>Python Programming</h3>
-                    <p>Foundation certification in Python programming, covering basic syntax, data structures, and
-                        problem-solving techniques.</p>
-                    <span class="certificate-date">2025</span>
-                    <div class="view-certificate">Click to view certificate</div>
-                </div> -->
+                
                 <!-- <div class="certificate-card scroll-animate" data-animation="fadeInUp" data-delay="400"
                     onclick="openCertificate('java')">
                     <div class="certificate-icon">
@@ -708,7 +722,7 @@
                     <div class="certificate-icon">
                         <i class="fas fa-trophy"></i>
                     </div>
-                    <h3>Jet Hackathon Runner Up</h3>
+                    <h3>Jet Hackathon Runner UP Certification</h3>
                     <p>Achieved runner-up position in Jet Hackathon, demonstrating exceptional problem-solving skills
                         and innovative thinking in competitive programming.</p>
                     <span class="certificate-date">2025</span>
