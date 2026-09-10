@@ -451,8 +451,10 @@ body:not(.dark) .navbar {
 }
 
 .profile-img {
-    width: 100%;
-    height: 100%;
+    width: 110%;
+    height: 110%;
+    margin-top: -10px;
+    margin-left: -5px;
     object-fit: cover;
 }
 
@@ -2349,8 +2351,8 @@ body:not(.dark) .project-overlay-panel {
 }
 
 .bio-image {
-    width: 160px;
-    height: 160px;
+    width: 190px;
+    height: 190px;
     border-radius: 50%;
     overflow: hidden;
     border: 4px solid hsla(175, 80%, 50%, 0.3);
@@ -2358,8 +2360,9 @@ body:not(.dark) .project-overlay-panel {
 }
 
 .bio-image img {
-    width: 100%;
-    height: 100%;
+    width: 120%;
+    height: 120%;
+    margin-top: -8px;
     object-fit: cover;
 }
 
