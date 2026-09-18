@@ -719,6 +719,10 @@ function openCertificate(certType) {
         'hackathon': {
             image: 'https://rilwankhan2023.neocities.org/Portfolio%20images/JET.jpg',
             title: 'Jet Hackathon Runner UP Certification'
+        },
+        'jmc': {
+            image: 'https://rilwankhan2023.neocities.org/Portfolio%20images/Rilwankhan%20JMC%20second.png',
+            title: 'Prompt-X Runner Up Certification'
         }
     };
 
