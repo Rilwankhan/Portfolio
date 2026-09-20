@@ -700,30 +700,42 @@ function openCertificate(certType) {
     const title = document.getElementById('certificateTitle');
 
     const certificates = {
+        'tri': {
+            image: 'Rilwankhan Tri Stone intern.png',
+            title: 'Digital Marketing Internship Certification'
+        },
         'web-dev': {
-            image: 'https://rilwankhan2023.neocities.org/Portfolio%20images/full.jpg',
-            title: 'Web Development Certification'
+            image: 'full.jpg',
+            title: 'Full Stack Development Certification'
         },
         'ui-ux': {
-            image: 'https://rilwankhan2023.neocities.org/Portfolio%20images/ui.jpg',
+            image: 'ui.jpg',
             title: 'UI/UX Design Certification'
         },
         'Ai-full': {
-            image: 'https://rilwankhan2023.neocities.org/Portfolio%20images/fullai.jpg',
+            image: 'fullai.jpg',
             title: 'AI Full-Stack Development Certification'
         },
         'B2A': {
-            image: 'https://rilwankhan2023.neocities.org/Portfolio%20images/fullai.jpg',
+            image: 'fullai.jpg',
             title: 'B2A Project Completion Certification'
         },
         'hackathon': {
-            image: 'https://rilwankhan2023.neocities.org/Portfolio%20images/JET.jpg',
+            image: 'JET.jpg',
             title: 'Jet Hackathon Runner UP Certification'
         },
         'jmc': {
-            image: 'https://rilwankhan2023.neocities.org/Portfolio%20images/Rilwankhan%20JMC%20second.png',
+            image: 'Rilwankhan JMC second.png',
             title: 'Prompt-X Runner Up Certification'
-        }
+        },
+        'sih': {
+            image: 'Rilwankhan SIH.png',
+            title: 'Smart India Hackathon 2025 – Innovation Project'
+        },
+        'ibm': {
+            image: 'Rilwankhan IBM 1st.png',
+            title: 'IBM SkillsBuild – Innovation Project'
+        },
     };
 
     if (certificates[certType]) {
