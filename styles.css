@@ -590,8 +590,16 @@ body:not(.dark) .navbar {
 }
 
 .projects-header {
+    width: 100%;
     text-align: center;
     margin-bottom: 5rem;
+}
+
+.projects-header .section-title {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
 }
 
 .projects-eyebrow {
@@ -1937,11 +1945,26 @@ body:not(.dark) .project-overlay-panel {
     background: var(--bg-secondary);
 }
 
+.certificates .section-title {
+    text-align: center;
+}
+
 .section-subtitle {
     color: var(--muted-foreground);
     max-width: 600px;
     margin: 1rem auto;
     font-size: 1.0625rem;
+    text-align: center;
+}
+
+@media (max-width: 480px) {
+    .certificates {
+        padding: 60px 0;
+    }
+
+    .certificates .section-title {
+        font-size: 1.6rem;
+    }
 }
 
 .certificates-grid {
@@ -2309,6 +2332,16 @@ body:not(.dark) .project-overlay-panel {
     gap: 1rem;
 }
 
+.footer-about-link {
+    color: var(--muted-foreground);
+    font-size: 0.875rem;
+    transition: color 0.3s ease;
+}
+
+.footer-about-link:hover {
+    color: var(--primary);
+}
+
 .footer-social a {
     color: var(--muted-foreground);
     font-size: 1.25rem;
@@ -2338,8 +2371,45 @@ body:not(.dark) .project-overlay-panel {
     margin: 0 auto 4rem;
 }
 
+.about-details {
+    padding: 0 0 7rem;
+    position: relative;
+}
+
+.about-intro {
+    padding: 6rem 0 2rem;
+    margin-top: 2.5rem;
+    position: relative;
+    scroll-margin-top: 5rem;
+}
+
+.about-intro .section-header {
+    margin-bottom: 0;
+}
+
+.about-details .bio-section,
+.about-details .values-section {
+    max-width: 980px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.about-details .bio-section {
+    margin-bottom: 2rem;
+}
+
 .bio-card {
-    padding: 2.5rem;
+    padding: 3rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.bio-card::before {
+    content: '';
+    position: absolute;
+    inset: 0 auto 0 0;
+    width: 4px;
+    background: var(--gradient-primary);
 }
 
 .bio-content {
@@ -2371,6 +2441,10 @@ body:not(.dark) .project-overlay-panel {
     object-fit: cover;
 }
 
+.about-details .bio-image img {
+    margin-top: -8px;
+}
+
 .bio-fallback {
     width: 100%;
     height: 100%;
@@ -2384,6 +2458,15 @@ body:not(.dark) .project-overlay-panel {
 .bio-text h2 {
     font-size: 1.5rem;
     margin-bottom: 1rem;
+}
+
+.bio-kicker {
+    color: var(--primary);
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.16em;
+    margin-bottom: 0.65rem;
+    text-transform: uppercase;
 }
 
 .bio-text p {
@@ -2664,6 +2747,26 @@ body:not(.dark) .project-overlay-panel {
     margin-top: 1rem;
 }
 
+.about-details .values-card {
+    padding: 2.5rem;
+}
+
+.values-heading {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.values-heading .bio-kicker {
+    margin-bottom: 0;
+}
+
+.about-details .section-subtitle {
+    margin-bottom: 0;
+}
+
 .value-item {
     text-align: center;
     padding: 1.5rem 1rem;
@@ -2732,8 +2835,38 @@ body:not(.dark) .project-overlay-panel {
 }
 
 @media (max-width: 768px) {
+    .about-intro {
+        padding: 4rem 0 1rem;
+        margin-top: 1.5rem;
+    }
+
+    .about-details {
+        padding-bottom: 4rem;
+    }
+
+    .about-details .bio-section {
+        margin-bottom: 1.5rem;
+    }
+
+    .bio-card,
+    .about-details .values-card {
+        padding: 1.5rem;
+    }
+
+    .bio-card::before {
+        width: 100%;
+        height: 4px;
+        inset: 0 0 auto;
+    }
+
     .values-grid {
         grid-template-columns: 1fr;
+    }
+
+    .values-heading {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 0.35rem;
     }
 }
 
