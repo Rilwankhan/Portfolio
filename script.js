@@ -644,6 +644,21 @@ const projectData = [
         ],
         stack: ['HTML5', 'CSS3', 'JavaScript', 'Responsive UI', 'UI/UX'],
         liveUrl: 'https://rilwankhan.github.io/bottlemedia/'
+    },
+    {
+        num: '04',
+        category: 'Freelance Project',
+        title: 'Fruit House',
+        desc: 'A vibrant wellness website for Fruit House, showcasing its premium fruit bowls, smoothies, and naturally nourishing menu through an inviting digital experience designed to turn healthy living into an everyday ritual.',
+        features: [
+            'Curated menu with wellness-focused categories',
+            'Product details with ingredients and calorie information',
+            'Health benefits and visual gallery sections',
+            'WhatsApp, Google Maps, and Instagram contact integration',
+            'Responsive design across desktop and mobile devices'
+        ],
+        stack: ['HTML5', 'CSS3', 'JavaScript', 'Responsive UI', 'WhatsApp Integration'],
+        liveUrl: 'https://rilwankhan.github.io/Fruithouse/'
     }
 ];
 
