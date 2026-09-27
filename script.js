@@ -615,6 +615,21 @@ const projectData = [
     },
     {
         num: '02',
+        category: 'Prototype / Team Project',
+        title: 'SafeOffice 3.0',
+        desc: 'A team-based prototype exploring a digital approach to workplace safety management, designed to demonstrate safety awareness, reporting, monitoring, and practical workplace workflows through an interactive web experience.',
+        features: [
+            'Safety incident reporting and awareness workflows',
+            'Interactive workplace monitoring dashboard demo',
+            'Safety management and checklist features',
+            'Team-built collaborative prototype',
+            'Responsive design across all devices'
+        ],
+        stack: ['HTML', 'CSS', 'JavaScript', 'Prototype'],
+        liveUrl: 'https://rilwankhan.github.io/Safeoffice-3.0/'
+    },
+    {
+        num: '03',
         category: 'E-Commerce',
         title: 'E-Commerce Website',
         desc: 'A modern full-featured e-commerce platform with a polished responsive UI, seamless product browsing, WhatsApp-based order integration, payment functionality, and complete data management for a smooth shopping experience.',
@@ -630,7 +645,7 @@ const projectData = [
         liveUrl: null
     },
     {
-        num: '03',
+        num: '04',
         category: 'Startup / Business Website',
         title: 'Bottle Media',
         desc: 'A professional digital solutions website created for the Bottle Media startup, showcasing its services, brand identity, business process, achievements, and client-focused digital solutions.',
@@ -646,7 +661,7 @@ const projectData = [
         liveUrl: 'https://rilwankhan.github.io/bottlemedia/'
     },
     {
-        num: '04',
+        num: '05',
         category: 'Freelance Project',
         title: 'Fruit House',
         desc: 'A vibrant wellness website for Fruit House, showcasing its premium fruit bowls, smoothies, and naturally nourishing menu through an inviting digital experience designed to turn healthy living into an everyday ritual.',
