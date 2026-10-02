@@ -17,34 +17,128 @@
 </head>
 
 <body>
-    <!-- Navbar -->
-    <nav class="navbar">
-        <div class="container nav-container">
-            <a href="#hero" class="logo">
-                <span class="gradient-text">Portfolio</span>
-            </a>
-            <div class="nav-links" id="navLinks">
-                <a href="#hero" class="nav-link active">Home</a>
-                <a href="#about-preview" class="nav-link">About</a>
-                <a href="#experience" class="nav-link">Experience</a>
-                <a href="#projects" class="nav-link">Projects</a>
-                <a href="#skills" class="nav-link">Skills</a>
-                <a href="#certificates" class="nav-link">Certificates</a>
-                <a href="#contact" class="nav-link">Contact</a>
-            </div>
-            <div class="nav-actions">
-                <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
-                    <i class="fas fa-sun" id="sunIcon"></i>
-                    <i class="fas fa-moon" id="moonIcon" style="display: none;"></i>
-                </button>
-                <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
-            </div>
+<!-- iPhone Style Hello Loader -->
+<div id="helloLoader">
+    <div class="helloText">
+        <span>𝒽</span>
+        <span>𝑒</span>
+        <span>𝓁</span>
+        <span>𝓁</span>
+        <span>𝑜</span>
+    </div>
+</div>
+    <nav class="liquid-nav navbar" id="nav" aria-label="Primary navigation">
+
+    <div class="liquid-glare-container">
+        <div class="liquid-glare" id="glare"></div>
+    </div>
+
+    <!-- Logo -->
+    <a href="#hero" class="logo">
+        <span class="gradient-text">Portfolio</span>
+    </a>
+
+    <!-- Desktop Navigation -->
+    <div class="nav-scroll">
+        <div class="nav-items" id="navItems">
+
+            <div class="active-pill" id="active-pill"></div>
+
+            <button class="nav-btn active" type="button" data-target="#hero">
+                <span class="btn-content"><i class="fas fa-home"></i><span>Home</span></span>
+            </button>
+
+            <button class="nav-btn" type="button" data-target="#about-preview">
+                <span class="btn-content"><i class="fas fa-user"></i><span>About</span></span>
+            </button>
+
+            <button class="nav-btn" type="button" data-target="#experience">
+                <span class="btn-content"><i class="fas fa-briefcase"></i><span>Experience</span></span>
+            </button>
+
+            <button class="nav-btn" type="button" data-target="#projects">
+                <span class="btn-content"><i class="fas fa-folder"></i><span>Projects</span></span>
+            </button>
+
+            <button class="nav-btn" type="button" data-target="#skills">
+                <span class="btn-content"><i class="fas fa-code"></i><span>Skills</span></span>
+            </button>
+
+            <button class="nav-btn" type="button" data-target="#certificates">
+                <span class="btn-content"><i class="fas fa-certificate"></i><span>Certificates</span></span>
+            </button>
+
+            <button class="nav-btn" type="button" data-target="#contact">
+                <span class="btn-content"><i class="fas fa-envelope"></i><span>Contact</span></span>
+            </button>
+
         </div>
-    </nav>
+    </div>
+
+    <div class="nav-divider"></div>
+
+    <!-- Theme -->
+    <button class="theme-btn" id="theme-btn" type="button" aria-label="Toggle theme">
+        <span class="theme-icon-wrapper">
+            <i class="fas fa-sun sun-icon"></i>
+            <i class="fas fa-moon moon-icon"></i>
+        </span>
+    </button>
+
+    <!-- Mobile Menu Button -->
+    <button
+        class="menu-toggle"
+        id="menuToggle"
+        type="button"
+        aria-label="Toggle navigation menu"
+        aria-expanded="false"
+    >
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+
+</nav>
+
+<!-- Mobile Navigation -->
+<div class="mobile-nav" id="mobileNav">
+
+    <button class="mobile-nav-link active" type="button" data-target="#hero">
+        <i class="fas fa-home"></i>
+        <span>Home</span>
+    </button>
+
+    <button class="mobile-nav-link" type="button" data-target="#about-preview">
+        <i class="fas fa-user"></i>
+        <span>About</span>
+    </button>
+
+    <button class="mobile-nav-link" type="button" data-target="#experience">
+        <i class="fas fa-briefcase"></i>
+        <span>Experience</span>
+    </button>
+
+    <button class="mobile-nav-link" type="button" data-target="#projects">
+        <i class="fas fa-folder"></i>
+        <span>Projects</span>
+    </button>
+
+    <button class="mobile-nav-link" type="button" data-target="#skills">
+        <i class="fas fa-code"></i>
+        <span>Skills</span>
+    </button>
+
+    <button class="mobile-nav-link" type="button" data-target="#certificates">
+        <i class="fas fa-certificate"></i>
+        <span>Certificates</span>
+    </button>
+
+    <button class="mobile-nav-link" type="button" data-target="#contact">
+        <i class="fas fa-envelope"></i>
+        <span>Contact</span>
+    </button>
+
+</div>
 
     <!-- Hero Section -->
     <section id="hero" class="hero">
@@ -54,7 +148,7 @@
         </div>
         <div class="container hero-container">
             <div class="hero-content animate-on-scroll">
-                <p class="hero-greeting">Hello, I'm <b style="color: #6366f1"> RILWANKHAN</b>
+                <p class="hero-greeting">Hello, I'm <b style="color: #01ffee"> Rilwankhan</b>
                 <p>
                 <h1 class="hero-title">
                     <span class="gradient-text">Creative</span><br>Developer
@@ -1265,6 +1359,25 @@
     <!-- Certificate admin UI removed to disable CRUD; site remains read-only -->
 
     <script src="script.js"></script>
+    <script>
+document.addEventListener("DOMContentLoaded", () => {
+
+    const loader = document.getElementById("helloLoader");
+
+    // Prevent scrolling during intro
+    document.body.classList.add("loader-active");
+
+    // Fast, smooth intro
+    setTimeout(() => {
+
+        loader.classList.add("hide");
+
+        document.body.classList.remove("loader-active");
+
+    }, 2100);
+
+});
+</script>
 </body>
 
 </html>
