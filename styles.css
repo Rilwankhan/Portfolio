@@ -2886,6 +2886,32 @@ body:not(.dark) .project-overlay-panel {
     gap: 2rem;
 }
 
+.certificate-category-title {
+    grid-column: 1 / -1;
+    position: relative;
+    margin: 1.25rem 0 -0.35rem;
+    padding-bottom: 0.75rem;
+    color: var(--primary);
+    font-size: clamp(1.35rem, 2.4vw, 1.75rem);
+    font-weight: 700;
+    letter-spacing: 0.02em;
+    text-align: center;
+    text-shadow: 0 0 22px hsla(175, 80%, 50%, 0.2);
+}
+
+.certificate-category-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: min(180px, 45%);
+    height: 3px;
+    border-radius: 999px;
+    background: linear-gradient(90deg, var(--primary), hsl(260, 70%, 60%), var(--primary));
+    box-shadow: 0 0 14px hsla(175, 80%, 50%, 0.35);
+    transform: translateX(-50%);
+}
+
 .certificate-card {
     background: var(--card);
     padding: 2rem;
