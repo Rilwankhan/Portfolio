@@ -705,14 +705,10 @@ const observer =
                                 bar.classList.add(
                                     'animate'
                                 );
-
                             });
                     }
-
                 }
-
             });
-
         },
         observerOptions
     );
@@ -727,7 +723,6 @@ document
     .forEach(el => {
 
         observer.observe(el);
-
     });
 // ================================
 // Contact Form Handling
@@ -2612,6 +2607,13 @@ function openCertificate(
 
 
     const certificates = {
+
+        'iot': {
+            image:
+                'Rilwankhan IOT Software Analyst.png',
+            title:
+                'IoT Software Analyst Certification'
+        },
 
         'tri': {
             image:
