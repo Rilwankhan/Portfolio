@@ -2608,6 +2608,21 @@ function openCertificate(
 
     const certificates = {
 
+
+        'deloitte': {
+            image:
+                'Rilwankhan Deloitte.png',
+            title:
+                'Deloitte Technology Job Simulation'
+        },
+
+        'datacom': {
+            image:
+                'Rilwankhan DataCom.png',
+            title:
+                'DataCom Certification'
+        },
+
         'iot': {
             image:
                 'Rilwankhan IOT Software Analyst.png',
