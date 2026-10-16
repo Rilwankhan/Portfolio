@@ -2618,7 +2618,7 @@ function openCertificate(
 
         'datacom': {
             image:
-                'Rilwankhan DataCom.png',
+                'Rilwankhan Datacom.png',
             title:
                 'DataCom Certification'
         },
