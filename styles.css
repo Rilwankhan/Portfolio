@@ -2930,6 +2930,41 @@ body:not(.dark) .project-overlay-panel {
     background: var(--bg-secondary);
 }
 
+.cert-category-header {
+    margin: 3.5rem 0 1.75rem;
+    text-align: center;
+}
+
+.cert-category-header:first-of-type {
+    margin-top: 2.5rem;
+}
+
+.cert-category-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 0.95rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--primary-foreground);
+    background: var(--gradient-primary);
+    padding: 0.6rem 1.75rem;
+    border-radius: 9999px;
+    box-shadow: 0 4px 20px hsla(175, 80%, 50%, 0.3);
+}
+
+.cert-category-eyebrow i {
+    font-size: 1rem;
+}
+
+.cert-category-eyebrow--achievements {
+    background: linear-gradient(135deg, hsl(38, 95%, 52%), hsl(25, 95%, 55%));
+    box-shadow: 0 4px 20px hsla(38, 95%, 52%, 0.35);
+    color: #fff;
+}
+
 .certificates .section-title {
     text-align: center;
 }
