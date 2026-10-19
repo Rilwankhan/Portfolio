@@ -1,3 +1,19 @@
+.hero-greeting {
+    color: #000;
+}
+
+.hero-greeting .hero-greeting-name,
+body:not(.dark) .hero-greeting .hero-greeting-name {
+    color: #800000;
+}
+
+.dark .hero-greeting {
+    color: var(--primary);
+}
+
+body.dark .hero-greeting .hero-greeting-name {
+    color: #fff;
+}
 /* ========================================
    iPhone Style Hello Screen
 ======================================== */
@@ -332,21 +348,23 @@ body:not(.dark) .glass-card {
     background: var(--primary);
     color: var(--primary-foreground);
 }
-
+.btn-primary:hover {
+    background: gray;
+    color: white;
+}
 .btn-primary:hover {
     opacity: 0.9;
     box-shadow: var(--glow-primary);
 }
 
 .btn-outline {
-    background: transparent;
-    color: var(--foreground);
-    border: 1px solid var(--border);
+    background: var(--primary);
+    color: var(--primary-foreground);
 }
 
 .btn-outline:hover {
-    background: var(--primary);
-    color: var(--primary-foreground);
+    background: gray;
+    color: white;
 }
 
 .btn-outline-primary {
@@ -1192,6 +1210,18 @@ body.dark .moon-icon {
     position: relative;
     padding-top: 70px;
     overflow: hidden;
+    background-image: url("Light2.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    transition: background-image 0.45s ease;
+}
+
+html.dark .hero,
+body.dark .hero,
+html[data-theme="dark"] .hero,
+body[data-theme="dark"] .hero {
+    background-image: url("Dark2.png");
 }
 
 .hero-bg-effects {
@@ -1255,8 +1285,9 @@ body.dark .moon-icon {
 }
 
 .hero-tags {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    width: min(100%, 480px);
     gap: 0.75rem;
     margin-bottom: 2rem;
 }
@@ -1264,6 +1295,7 @@ body.dark .moon-icon {
 .hero-tag {
     display: flex;
     align-items: center;
+    justify-content: center;
     gap: 0.5rem;
     padding: 0.625rem 1rem;
     background: var(--card);
@@ -1289,8 +1321,7 @@ body.dark .moon-icon {
 }
 
 .hero-image {
-    flex: 1;
-    display: flex;
+    display: none;
     justify-content: center;
 }
 
@@ -1335,9 +1366,14 @@ body.dark .moon-icon {
 }
 
 @media (max-width: 768px) {
-    .hero {
+    .hero,
+    html.dark .hero,
+    body.dark .hero,
+    html[data-theme="dark"] .hero,
+    body[data-theme="dark"] .hero {
         padding-top: 100px;
         min-height: 100svh;
+        background-image: none;
     }
 
     .hero-container {
@@ -1351,7 +1387,7 @@ body.dark .moon-icon {
     }
 
     .hero-image {
-        order: 1;
+        display: none;
     }
 
     .hero-greeting {
@@ -1370,18 +1406,37 @@ body.dark .moon-icon {
     }
 
     .hero-tags {
-        justify-content: center;
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        width: 100%;
+        max-width: 480px;
+        margin-left: auto;
+        margin-right: auto;
         gap: 0.5rem;
         margin-bottom: 1.25rem;
     }
 
     .hero-tag {
+        justify-content: center;
+        text-align: center;
         font-size: 0.8rem;
         padding: 0.5rem 0.85rem;
     }
 
     .hero-cta {
         justify-content: center;
+    }
+
+}
+
+@media (max-width: 767px) {
+    .hero-image {
+        display: flex;
+        order: 1;
+    }
+
+    .hero-content {
+        order: 2;
     }
 
     .profile-circle {
@@ -1395,13 +1450,27 @@ body.dark .moon-icon {
         padding-top: 90px;
     }
 
+    .btn-outline
+    {
+        box-shadow: none;
+    }
+
     .hero-container {
         gap: 1.25rem;
     }
 
+    .hero-image {
+        display: flex;
+        order: 1;
+    }
+
+    .hero-content {
+        order: 2;
+    }
+
     .profile-circle {
-        width: 170px;
-        height: 170px;
+        width: 245px;
+        height: 245px;
     }
 
     .hero-title {
@@ -2884,32 +2953,6 @@ body:not(.dark) .project-overlay-panel {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 2rem;
-}
-
-.certificate-category-title {
-    grid-column: 1 / -1;
-    position: relative;
-    margin: 1.25rem 0 -0.35rem;
-    padding-bottom: 0.75rem;
-    color: var(--primary);
-    font-size: clamp(1.35rem, 2.4vw, 1.75rem);
-    font-weight: 700;
-    letter-spacing: 0.02em;
-    text-align: center;
-    text-shadow: 0 0 22px hsla(175, 80%, 50%, 0.2);
-}
-
-.certificate-category-title::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    width: min(180px, 45%);
-    height: 3px;
-    border-radius: 999px;
-    background: linear-gradient(90deg, var(--primary), hsl(260, 70%, 60%), var(--primary));
-    box-shadow: 0 0 14px hsla(175, 80%, 50%, 0.35);
-    transform: translateX(-50%);
 }
 
 .certificate-card {
