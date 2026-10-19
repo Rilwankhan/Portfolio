@@ -3,7 +3,7 @@
 }
 
 .hero-greeting .hero-greeting-name,
-body:not(.dark) .hero-greeting .hero-greeting-name {
+body:not(.dark) .hero-greeting .hero-greeting-name  {
     color: #800000;
 }
 
@@ -11,8 +11,11 @@ body:not(.dark) .hero-greeting .hero-greeting-name {
     color: var(--primary);
 }
 
-body.dark .hero-greeting .hero-greeting-name {
+body.dark .hero-greeting .hero-greeting-name  {
     color: #fff;
+}
+body.dark .hero-description  {
+    color: #d2d2d2;
 }
 /* ========================================
    iPhone Style Hello Screen
