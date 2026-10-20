@@ -1224,7 +1224,7 @@ html.dark .hero,
 body.dark .hero,
 html[data-theme="dark"] .hero,
 body[data-theme="dark"] .hero {
-    background-image: url("Dark2.png");
+    background-image: url("Dark.png");
 }
 
 .hero-bg-effects {
